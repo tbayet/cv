@@ -1,0 +1,191 @@
+body
+{
+	background-color: rgba(16, 27, 30, 1);
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+h2
+{
+	color: white;
+	padding-top: 0.3vmax;
+	padding-bottom: 0.3vmax;
+	font-size: calc(16px + 1.5vmax);
+	text-shadow: 2px 2px 9px #000000;
+}
+
+h3
+{
+	color: white;
+	padding-top: 0.1vmax;
+	padding-bottom: 0.1vmax;
+	font-size: calc(8px + 1.5vmax);
+}
+
+#profil
+{
+	z-index: 0.8;
+	padding: 0;
+	margin: 0;
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 20vw;
+	height: 100vh;
+	background-color: rgba(154, 94, 87, 0.9);
+	text-align: center;
+	box-shadow: 2px 0px 10px #FFFFFF;
+}
+
+#banner
+{
+	z-index: 0;
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 80%;
+	height: 100vh;
+	background-color: rgba(59, 103, 205, 0.2);
+	overflow: auto;
+}
+
+#content
+{
+	z-index: 0;
+	margin-top: 70vh;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 100%;
+	text-align: center;
+	background-image: url("http://www.lamoutarde.fr/wp-content/themes/daynnight/images/backgrounds/background-image2.jpg");
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+.box
+{
+	padding: 2%;
+	margin: 2%;
+	margin-top: calc(2% + 20px);
+	display: inside;
+	height: 200px;
+	background-color: rgba(220, 220, 220, 0.9);
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #000000;
+}
+
+#navbardiv
+{
+	min-height: 54px;
+}
+
+#navbar
+{
+	display: block;
+	border-style: solid;
+	border-color: red;
+	z-index: 0.9;
+	box-shadow: 5px 7px 18px #000000;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.navbar li
+{
+	float: left;
+}
+
+/* Style the links inside the list items */
+ul.navbar li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.navbar li a:hover 
+{
+	background-color: #555;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.navbar li.icon
+{
+	display: none;
+}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px)
+{
+	ul.navbar li:not(:first-child)
+	{
+		display: none;
+	}
+	ul.navbar li.icon
+	{
+		float: right;
+		display: inline-block;
+	}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px)
+{
+	ul.navbar.responsive
+	{
+		position: relative;
+	}
+	ul.navbar.responsive li.icon
+	{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.navbar.responsive li
+	{
+		float: none;
+		display: inline;
+	}
+	ul.navbar.responsive li a
+	{
+		display: block;
+		text-align: left;
+	}
+}
+
+#avatar
+{
+	display: inline-block;
+	margin-top: 2vh;
+	margin-left: 2vh;
+	margin-right: 2vh;
+	margin-bottom: 2vh;
+	max-width: 80%;
+	max-height: 80%;
+	width: height;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	box-shadow: 0px 0px 20px #000000;
+}
