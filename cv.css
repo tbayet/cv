@@ -65,11 +65,12 @@ h3
 	padding-bottom: 2%;
 	width: 100%;
 	text-align: center;
-	background-image: url("http://www.lamoutarde.fr/wp-content/themes/daynnight/images/backgrounds/background-image2.jpg");
+	background-image: url("fond.svg");
 	background-repeat: repeat;
 	background-attachment: fixed;
 }
 
+/*	background-image: url("http://www.lamoutarde.fr/wp-content/themes/daynnight/images/backgrounds/background-image2.jpg");*/
 .box
 {
 	padding: 2%;
