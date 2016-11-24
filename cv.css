@@ -70,14 +70,13 @@ h3
 	background-attachment: fixed;
 }
 
-/*	background-image: url("http://www.lamoutarde.fr/wp-content/themes/daynnight/images/backgrounds/background-image2.jpg");*/
 .box
 {
 	padding: 2%;
 	margin: 2%;
 	margin-top: calc(2% + 20px);
 	display: inside;
-	height: 200px;
+	height: auto;
 	background-color: rgba(220, 220, 220, 0.9);
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #000000;
@@ -93,11 +92,10 @@ h3
 	display: block;
 	border-style: solid;
 	border-color: red;
-	z-index: 0.9;
+	z-index: 1;
 	box-shadow: 5px 7px 18px #000000;
 }
 
-/* Remove margins and padding from the list, and add a black background color */
 ul.navbar {
     list-style-type: none;
     margin: 0;
@@ -105,14 +103,10 @@ ul.navbar {
     overflow: hidden;
     background-color: #333;
 }
-
-/* Float the list items side by side */
 ul.navbar li
 {
 	float: left;
 }
-
-/* Style the links inside the list items */
 ul.navbar li a {
     display: inline-block;
     color: #f2f2f2;
@@ -122,20 +116,14 @@ ul.navbar li a {
     transition: 0.3s;
     font-size: 17px;
 }
-
-/* Change background color of links on hover */
 ul.navbar li a:hover 
 {
 	background-color: #555;
 }
-
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.navbar li.icon
 {
 	display: none;
 }
-
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:680px)
 {
 	ul.navbar li:not(:first-child)
@@ -148,8 +136,6 @@ ul.navbar li.icon
 		display: inline-block;
 	}
 }
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px)
 {
 	ul.navbar.responsive
