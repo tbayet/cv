@@ -1,14 +1,99 @@
+function getRandomShade(colorcode)
+{
+	var random;
+	var argb;
+
+	function hexToRgb(hex)
+	{
+		var p = parseInt(hex, 16);
+		var rgb = [(p >> 16) & 255, (p >> 8) & 255, p & 255];
+		return (rgb);
+	}
+
+	function rgbtoHex(rgb)
+	{
+		return ("#" + ((1 << 24) + (rgb[0] << 16) + (rgb[1] << 8) + rgb[2]).toString(16).slice(1));
+	}
+
+	argb = hextoRgb(colorcode.slice(1));
+	for (var i = 0; i < 3; i++)
+	{
+		random = Math.round(Math.random() * 20 + 1);
+		random = (Math.round(Math.random())) ? -random: random;
+		argb[i] += random;
+		if (argb[i] < 0)
+			argb[i] = -random;
+		if (argb[i] > 255)
+			argb[i] = 255 - random;
+	}
+	return (rgbtoHex(argb));
+}
+
 function drawrect(idcanvas, percent, wordt)
 {
 	var canvas = document.getElementById(idcanvas);
 	var context = canvas.getContext("2d");
-	
+
+	percent *= 3;
+
+	//background
 	context.beginPath();
 	context.lineWidth = 1;
 	context.fillStyle = "#1C9080";
-	context.rect(0, 0, 300, 60);
+	context.rect(0, 0, percent, 60);
 	context.closePath();
 	context.fill();
+
+	//shadows
+	context.beginPath();
+	context.lineWidth = 5;
+	context.strokeStyle = "#0B614B";
+	context.rect(0, 0, percent - 3, 57);
+	context.stroke();
+
+	//rest background
+	context.beginPath();
+	context.lineWidth = 1;
+	context.fillStyle = "#444";
+	context.rect(percent, 0, 300 - percent, 60);
+	context.closePath();
+	context.fill();
+
+	//rest shadows
+	context.beginPath();
+	context.lineWidth = 5;
+	context.strokeStyle = "black";
+	context.rect(percent + 3, 3, 300 - (percent + 3), 57);
+	context.stroke();
+
+
+	//borderlines
+	context.beginPath();
+	context.lineWidth = 2;
+	context.strokeStyle = "black";
+	context.rect(0, 0, 300, 60);
+	context.stroke();
+
+	animate();
+
+	function animate()
+	{
+		var j;
+
+		for (var i = 1; i < percent; i += 15)
+		{
+			j = Math.round(Math.random() * 4);
+			context.beginPath();
+			context.lineWidth = 1;
+			context.fillStyle = getRandomShade("#1C9080");
+			if (i + 15 > percent)
+				context.rect(i, j * 15 + 1, percent, 60);
+			else
+				context.rect(i, j * 15 + 1, i + 15, 60);
+			context.closePath();
+			context.fill();
+		}
+	}
 }
 
 function drawcircle(idcanvas, percent, wordt)
