@@ -80,6 +80,7 @@ h3
 	background-color: rgba(220, 220, 220, 0.9);
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #000000;
+	text-align: center;
 }
 
 #navbardiv
@@ -172,7 +173,38 @@ ul.navbar li.icon
 	width: height;
 	border-radius: 50%;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 2px;X
 	border-color: white;
 	box-shadow: 0px 0px 20px #000000;
+}
+*
+#skills div
+{
+	text-align: left;
+}
+
+.c_rect
+{
+	width: 300px;
+	height: 60px;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.imgtime
+{
+	width: 90%;
+	height: auto;
+	border-radius: 50%;
+	
+}
+
+.timediv
+{
+	text-align: left;
+	width: 100%;
+	min-height: 100%;
+	background-color: white;
+	display: none;
+	opacity: 0;
 }
