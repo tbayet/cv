@@ -196,6 +196,7 @@ ul.navbar li.icon
 	width: 90%;
 	height: auto;
 	border-radius: 50%;
+	cursor: pointer;
 }
 
 audio
@@ -301,37 +302,3 @@ audio
 	text-shadow: 2px 0px 10px #000000;
 }
 
-#form
-{	border-style: solid;
-	border-color: green;
-	text-align: center;
-}
-
-#form div:first-child
-{
-	display:block;
-	width: 300px;
-	border-style: solid;
-	border-color: red;
-}
-#form div:not(:first-child)
-{
-	display:inline-block;
-	width: 400px;
-	border-style: solid;
-	border-color: cyan;
-}
-
-#form  input
-{
-	width: 90%;
-	height: 5vh;
-	border-radius: 10px;
-}
-
-#form textarea
-{
-	width: 90%;
-	height : 28vh;
-	border-radius: 10px;
-}

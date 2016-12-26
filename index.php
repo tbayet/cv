@@ -111,6 +111,8 @@
 								<li>Vente/conseils de matériel et montage d'ordinateurs.</li>
 								<li>Création du jeu vidéo 8bit the musical (renommé ensuite Old School Musical).</li>
 							</ul>
+							J'assure la majorité des dépannages, développant ainsi mon relationnel avec les clients et travaillant sur le jeu au bureau entre deux trajets. L'entreprise tiens financièrement mais n'arrive pas à gagner davantage de clientèle.
+							Un choix très certainement immature de notre part d'avoir voulu nous charger de la communication et de la promotion au lieu d'embaucher quelqu'un dont c'est le métier.
 							</p></div>
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div04", -1);' onmouseleave='slide("div04", 0);'><p><b><</b></p></div>
@@ -130,7 +132,7 @@
 								<li>Logiciels : Renoise, FL Studio, Audacity, GraphicsGale.</li>
 							</ul>
 							J'ai ensuite quitté l'équipe d'Old School Musical.
-							Quelques extraits de mon travail
+							Quelques extraits de mon travail<br />
 							<br /><audio controls="controls">
 								<source src="sample1.wav" type="audio/wav" />
 								<source src="sample1.mp3" type="audio/mp3" />
@@ -196,7 +198,7 @@
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div06", -1);' onmouseleave='slide("div06", 0);'><p><b><</b></p></div>
 								<div class="butright" onmouseenter='slide("div06", 1);' onmouseleave='slide("div06", 0);'><p><b>></b></p></div>
-								<div><img src="421.jpg" /><img src="422.png" /><img src="mu3.png" /><img src="mu4.png" /><img src="mu5.png" /></div>
+								<div><img src="421.jpg" /><img src="422.png" /><img src="423.png" /></div>
 							</div>
 						</div>
 					</td>
@@ -287,20 +289,9 @@
 			</div>
 			<div id="contact" class="box">
 				<h4>Contact</h4>
-				<form>
-					<div id="form">
-						<div>
-							<input type="text" id="input-name" placeholder="Société/Nom" />
-							<input type="email" id="input-email" placeholder="Adresse mail" />
-							<input type="text" id="input-subject" placeholder="Sujet" />
-						</div>
-						<div>
-							<textarea type="text" id="input-message" placeholder="Message"></textarea>
-						</div>
-					</div>
-					<input type="submit" value="Submit" id="input-submit" />
-				</form>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12475.671361035467!2d2.292143048937684!3d48.902305214780554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f7d03e984ab%3A0xce1d395e61609e94!2sGare+d&#39;Asnieres!5e0!3m2!1sfr!2sfr!4v1480010074851"
+				<div><input value=" @" style="height:35px;width:20px;padding:0;border-top-left-radius:5px;border-bottom-left-radius:5px;" disabled /> 
+				<script>document.write('<input type="email" '/*nobot*/+'value="bay'+'et.t'+'homas@'+/*nobot*/'gmail.com" readonly="readonly" style="height:35px;width:160px;padding:0;text-align:center;border-top-right-radius:5px;border-bottom-right-radius:5px;" />');</script></div>
+				<br /><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12475.671361035467!2d2.292143048937684!3d48.902305214780554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f7d03e984ab%3A0xce1d395e61609e94!2sGare+d&#39;Asnieres!5e0!3m2!1sfr!2sfr!4v1480010074851"
 				width="100%" height="300px" frameborder="0" style="border:0; margin:0; border-radius: 5px;" allowfullscreen></iframe>
 			</div>
 		</div>
