@@ -5,6 +5,9 @@ body
 	height: 100vh;
 	margin: 0px;
 	padding: 0px;
+	color: #605833;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
 }
 
 ::-webkit-scrollbar { 
@@ -13,6 +16,7 @@ body
 
 h2
 {
+	font-family: cambria;
 	color: white;
 	padding-top: 0.3vmax;
 	padding-bottom: 0.3vmax;
@@ -22,10 +26,23 @@ h2
 
 h3
 {
+	font-family: cambria;
 	color: white;
 	padding-top: 0.1vmax;
 	padding-bottom: 0.1vmax;
 	font-size: calc(8px + 1.5vmax);
+}
+
+h5
+{
+	color: #605833;
+	text-shadow: 1px 1px 2px #605833;
+	font-family: 'Trocchi', serif;
+	font-size: 45px;
+	font-weight: normal;
+	line-height: 48px;
+	margin: 0;
+	margin-bottom: 30px;;
 }
 
 #profil
@@ -39,9 +56,36 @@ h3
 	top: 0;
 	width: 20vw;
 	height: 100vh;
-	background-color: rgba(154, 94, 87, 0.9);
+	background-color: rgba(69, 3, 3, 0.9);
 	text-align: center;
 	box-shadow: 2px 0px 10px #FFFFFF;
+}
+
+#sites
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+	margin-left: 4%;
+	margin-right:4%;
+	max-width: 400px;
+}
+
+#sites img
+{
+	opacity: 0.8;
+	margin-top: 4%;
+	border-radius: 3px;
+	border-top-right-radius: calc(6px + 1.6vmax);
+	border-bottom-left-radius: calc(6px + 1.6vmax);
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	transition: all 500ms ease;
+}
+#sites img:hover {
+	border-radius:0;
+	opacity: 1;
 }
 
 #banner
@@ -302,3 +346,43 @@ audio
 	text-shadow: 2px 0px 10px #000000;
 }
 
+#pa1
+{
+	background-image: url("img/japan.jpg");
+}
+#pa1:hover
+{
+	background-image: url("img/veg.jpg");
+}
+
+#pa2
+{
+	background-image: url("img/music.jpg");
+}
+#pa2:hover
+{
+	background-image: url("img/tamb.jpg");
+}
+
+#pa3
+{
+	background-image: url("img/cinema.jpeg");
+}
+#pa3:hover
+{
+	background-image: url("img/films.png");
+}
+
+#pa4
+{
+	background-image: url("img/pizza.jpg");
+}
+#pa4:hover
+{
+	background-image: url("img/veg.jpg");
+}
+
+footer
+{
+	color: lavender;
+}

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="cv.css"/>
 	<link rel="icon" type="image/png" href="favicon.png" />
 	<script src="tools.js"></script>
+	<script src="comp.js"></script>
 </HEAD>
 <BODY onload="resizeVideo()" onresize="resizeVideo();refreshnav();">
 	<video id="videofond" style="padding: 0px; margin: 0px; position:fixed; left:0; top:0; min-width:100%; z-index: -1" autoplay="" loop="" muted="">
@@ -13,23 +14,24 @@
 	</video>
 	<ul class="navbar" id="navbar">
 		<li><a href="#timeline">Timeline</a></li>
-		<li><a href="#interest">Centres d'int&eacute;r&ecirc;ts</a></li>
+		<li><a href="#interest">Centres d'intérêt</a></li>
 		<li><a href="#langs">Langues</a></li>
 		<li><a href="#knowledge">Connaissances</a></li>
-		<li><a href="#skills">Comp&eacute;tences</a></li>
+		<li><a href="#skills">Compétences</a></li>
 		<li><a href="#contact">Contact</a></li>
 		<li class="icon">
 			<a href="javascript:void(0);" onclick="openNav()">&#9776;</a>
 		</li>
 	</ul>
 	<div id="profil">
-		<img id="avatar" src="avatar.jpg" alt="Photo d'identité" onmouseover='zoom("avatar", 1)' onmouseleave='zoom("avatar", 0)' />
+		<img id="avatar" src="img/avatar.jpg" alt="Photo d'identité" onmouseover='zoom("avatar", 1)' onmouseleave='zoom("avatar", 0)' />
 		<div style="display:inline-block; vertical-align:top;">
-		<h2>Thomas Bayet</h2>
-		<h3><?php echo((date("Y") - 1991) - ((date("m") - 7 > 0) ? 0 : 1)); ?> Ans</h3>
+			<h2>Thomas Bayet</h2>
+			<h3><?php echo((date("Y") - 1991) - ((date("m") - 7 > 0) ? 0 : 1)); ?> Ans</h3>
 		</div>
-		<div style="display:inline-block; vertical-align:top;">
-			<p>LINKEDIN</p>
+		<div id="sites">
+			<a href="http://www.linkedin.com/in/tbayet" target="_blank"><img width="90%" src="img/linked.png" /></a>
+			<a href="https://github.com/tbayet" target="_blank"><img width="90%" src="img/github.png" /></a>
 		</div>
 	</div>
 	
@@ -39,17 +41,17 @@
 			<div id="timeline" class="box">
 				<table style="width:100%;"><tr>
 					<td style="width:10%;">
-						<img id="img06" class="imgtime" src="42.jpg" onclick='deploy("tdtime", "div06");' onmouseover='zoom("img06", 1)' onmouseleave='zoom("img06", 0)' />
-						<img id="img05" class="imgtime" src="guitar.jpg" onclick='deploy("tdtime", "div05");' onmouseover='zoom("img05", 1)' onmouseleave='zoom("img05", 0)' />
-						<img id="img04" class="imgtime" src="webcitrus.jpeg" onclick='deploy("tdtime", "div04");' onmouseover='zoom("img04", 1)' onmouseleave='zoom("img04", 0)' />
-						<img id="img03" class="imgtime" src="ub.jpg" onclick='deploy("tdtime", "div03");' onmouseover='zoom("img03", 1)' onmouseleave='zoom("img03", 0)' />
-						<img id="img02" class="imgtime" src="iut.jpg" onclick='deploy("tdtime", "div02");' onmouseover='zoom("img02", 1)' onmouseleave='zoom("img02", 0)' />
-						<img id="img01" class="imgtime" src="lhf.png" onclick='deploy("tdtime", "div01");' onmouseover='zoom("img01", 1)' onmouseleave='zoom("img01", 0)' />
+						<img id="img06" class="imgtime" src="img/42.jpg" onclick='deploy("tdtime", "div06");' onmouseover='zoom("img06", 1)' onmouseleave='zoom("img06", 0)' />
+						<img id="img05" class="imgtime" src="img/guitar.jpg" onclick='deploy("tdtime", "div05");' onmouseover='zoom("img05", 1)' onmouseleave='zoom("img05", 0)' />
+						<img id="img04" class="imgtime" src="img/webcitrus.jpeg" onclick='deploy("tdtime", "div04");' onmouseover='zoom("img04", 1)' onmouseleave='zoom("img04", 0)' />
+						<img id="img03" class="imgtime" src="img/ub.jpg" onclick='deploy("tdtime", "div03");' onmouseover='zoom("img03", 1)' onmouseleave='zoom("img03", 0)' />
+						<img id="img02" class="imgtime" src="img/iut.jpg" onclick='deploy("tdtime", "div02");' onmouseover='zoom("img02", 1)' onmouseleave='zoom("img02", 0)' />
+						<img id="img01" class="imgtime" src="img/lhf.png" onclick='deploy("tdtime", "div01");' onmouseover='zoom("img01", 1)' onmouseleave='zoom("img01", 0)' />
 					</td>
 					<td id="tdtime" style="background-color: white; vertical-align: top;">
 						<div id="div01" class="timediv">
 							<h4>2008-2009</h4>
-							<img src="bac.jpg" width="300px" />
+							<img src="img/bac.jpg" width="300px" />
 							<p>Obtention du <b>Baccalauréat Scientifique</b> au lycée Hippolyte Fontaine à Dijon.
 							J'y ai choisi de suivre le cursus avec l'option SVT, spécialisation Mathématiques, et un module facultatif d'Art.
 							J'ai aussi étudié le grec ancien et le latin.</p>
@@ -80,7 +82,7 @@
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div02", -1);' onmouseleave='slide("div02", 0);'><p><b><</b></p></div>
 								<div class="butright" onmouseenter='slide("div02", 1);' onmouseleave='slide("div02", 0);'><p><b>></b></p></div>
-								<div><img src="iut4.jpg" /><img src="iut1.jpg" /><img src="iut3.jpg" /><img src="iut5.png" /><img src="iut6.png" /><img src="iut2.jpg" /></div>
+								<div><img src="img/iut4.jpg" /><img src="img/iut1.jpg" /><img src="img/iut3.jpg" /><img src="img/iut5.png" /><img src="img/iut6.png" /><img src="img/iut2.jpg" /></div>
 							</div>
 						</div>
 						<div id="div03" class="timediv">
@@ -97,7 +99,7 @@
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div03", -1);' onmouseleave='slide("div03", 0);'><p><b><</b></p></div>
 								<div class="butright" onmouseenter='slide("div03", 1);' onmouseleave='slide("div03", 0);'><p><b>></b></p></div>
-								<div><img src="ub1.png" /><img src="ub2.png" /><img src="ub3.bmp" /><img src="ub4.png" /></div>
+								<div><img src="img/ub1.png" /><img src="img/ub2.png" /><img src="img/ub3.bmp" /><img src="img/ub4.png" /></div>
 							</div>
 						</div>
 						<div id="div04" class="timediv">
@@ -117,7 +119,7 @@
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div04", -1);' onmouseleave='slide("div04", 0);'><p><b><</b></p></div>
 								<div class="butright" onmouseenter='slide("div04", 1);' onmouseleave='slide("div04", 0);'><p><b>></b></p></div>
-								<div><img src="wc1.jpg" /><img src="wc2.jpg" /><img src="osm1.jpg" /><img src="wc3.png" /></div>
+								<div><img src="img/wc1.jpg" /><img src="img/wc2.jpg" /><img src="img/osm1.jpg" /><img src="img/wc3.png" /></div>
 							</div>
 						</div>
 						<div id="div05" class="timediv">
@@ -134,40 +136,40 @@
 							J'ai ensuite quitté l'équipe d'Old School Musical.
 							Quelques extraits de mon travail<br />
 							<br /><audio controls="controls">
-								<source src="sample1.wav" type="audio/wav" />
-								<source src="sample1.mp3" type="audio/mp3" />
+								<source src="music/sample1.wav" type="audio/wav" />
+								<source src="music/sample1.mp3" type="audio/mp3" />
 								Votre navigateur n'est pas compatible
 							</audio>
 							<audio controls="controls">
-								<source src="sample2.wav" type="audio/wav" />
-								<source src="sample2.mp3" type="audio/mp3" />
+								<source src="music/sample2.wav" type="audio/wav" />
+								<source src="music/sample2.mp3" type="audio/mp3" />
 								Votre navigateur n'est pas compatible
 							</audio>
 							<audio controls="controls">
-								<source src="sample4.wav" type="audio/wav" />
-								<source src="sample4.mp3" type="audio/mp3" />
+								<source src="music/sample4.wav" type="audio/wav" />
+								<source src="music/sample4.mp3" type="audio/mp3" />
 								Votre navigateur n'est pas compatible
 							</audio>
 							<audio controls="controls">
-								<source src="sample5.wav" type="audio/wav" />
-								<source src="sample5.mp3" type="audio/mp3" />
+								<source src="music/sample5.wav" type="audio/wav" />
+								<source src="music/sample5.mp3" type="audio/mp3" />
 								Votre navigateur n'est pas compatible
 							</audio>
 							<audio controls="controls">
-								<source src="sample6.wav" type="audio/wav" />
-								<source src="sample6.mp3" type="audio/mp3" />
+								<source src="music/sample6.wav" type="audio/wav" />
+								<source src="music/sample6.mp3" type="audio/mp3" />
 								Votre navigateur n'est pas compatible
 							</audio>
 							<audio controls="controls">
-								<source src="sample7.wav" type="audio/wav" />
-								<source src="sample7.mp3" type="audio/mp3" />
+								<source src="music/sample7.wav" type="audio/wav" />
+								<source src="music/sample7.mp3" type="audio/mp3" />
 								Votre navigateur n'est pas compatible
 							</audio>
 							</p></div>
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div05", -1);' onmouseleave='slide("div05", 0);'><p><b><</b></p></div>
 								<div class="butright" onmouseenter='slide("div05", 1);' onmouseleave='slide("div05", 0);'><p><b>></b></p></div>
-								<div><img src="mu1.png" /><img src="mu2.png" /><img src="mu3.png" /><img src="mu4.png" /><img src="mu5.png" /></div>
+								<div><img src="img/mu1.png" /><img src="img/mu2.png" /><img src="img/mu3.png" /><img src="img/mu4.png" /><img src="img/mu5.png" /></div>
 							</div>
 						</div>
 						<div id="div06" class="timediv">
@@ -198,31 +200,27 @@
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div06", -1);' onmouseleave='slide("div06", 0);'><p><b><</b></p></div>
 								<div class="butright" onmouseenter='slide("div06", 1);' onmouseleave='slide("div06", 0);'><p><b>></b></p></div>
-								<div><img src="421.jpg" /><img src="422.png" /><img src="423.png" /></div>
+								<div><img src="img/421.jpg" /><img src="img/422.png" /><img src="img/423.png" /></div>
 							</div>
 						</div>
 					</td>
 				</tr></table>
 			</div>
 			<div id="interest" class="box">
-				<h4>Centres d'int&eacute;r&ecirc;ts</h4>
-				<div id="pa1" class="showimg" style="background-image:url('japan.jpg');"
-				onmouseover='showtxt("pa1", 1)' onmouseleave='showtxt("pa1", 0)'>
+				<h5>Centres d'int&eacute;r&ecirc;ts</h5>
+				<div id="pa1" class="showimg" onmouseover='showtxt("pa1", 1)' onmouseleave='showtxt("pa1", 0)'>
 					<p>Voyager, faire du Woofing (fermes et associations) ou du Couchsurfing, aller randonner et camper.
 					Destinations: Japon, Grèce, Finlande, Caraïbes, Belgique...</p>
 				</div>
-				<div id="pa2" class="showimg" style="background-image:url('music.jpg');"
-				onmouseover='showtxt("pa2", 1)' onmouseleave='showtxt("pa2", 0)'>
+				<div id="pa2" class="showimg" onmouseover='showtxt("pa2", 1)' onmouseleave='showtxt("pa2", 0)'>
 					<p>Pratiquer mes instruments (guitare, percussions, piano...), improviser, composer, et écouter
-					de la musique (electronica, trip-hop, jazz, post-rock, ambiant).</p>
+					de la musique (electronica, trip-hop, breakcore, post-rock, ambiant...).</p>
 				</div>
-				<div id="pa3" class="showimg" style="background-image:url('cinema.jpeg');"
-				onmouseover='showtxt("pa3", 1)' onmouseleave='showtxt("pa3", 0)'>
-					<p>Regarder les films et séries, principalement de science-fiction/fantastique. Noter chaque oeuvre
+				<div id="pa3" class="showimg" onmouseover='showtxt("pa3", 1)' onmouseleave='showtxt("pa3", 0)'>
+					<p>Regarder des films et des séries, avec un fort attrait pour la science-fiction. Noter chaque oeuvre vue
 					sur SensCritique et contribuer aux critiques et aux classements.</p>
 				</div>
-				<div id="pa4" class="showimg" style="background-image:url('pizza.jpg');"
-				onmouseover='showtxt("pa4", 1)' onmouseleave='showtxt("pa4", 0)'>
+				<div id="pa4" class="showimg" onmouseover='showtxt("pa4", 1)' onmouseleave='showtxt("pa4", 0)'>
 					<p>Cuisiner végétalien, partager un bon repas avec des proches, suivre des recettes et en improviser.</p>
 				</div>
 			</div>
@@ -230,7 +228,7 @@
 				dfsAAAfsff
 			</div>
 			<div id="langs" class="box" style="align:center; text-align:center; vertical-align:top;">
-				<h4>Languages</h4>
+				<h5>Langues</h5>
 				<table style="display:inline-table;border-bottom-style:solid;"><tr>
 					<td>Anglais</td>
 					<td style="border-left-style:solid;">
@@ -253,7 +251,7 @@
 				</tr></table>
 			</div>
 			<div id="knowledge" class="box">
-				<h4>Connaissances</h4>
+				<h5>Connaissances</h5>
 				<canvas id="ring" width="100" height="100" onclick='drawcircle("ring", 85, "C");'
 				onmouseover='zoom("ring", 1)' onmouseleave='zoom("ring", 0)'></canvas>
 				<canvas id="ring2" width="100" height="100" onclick='drawcircle("ring2", 65, "unix");'
@@ -274,26 +272,22 @@
 				onmouseover='zoom("ring9", 1)' onmouseleave='zoom("ring9", 0)'></canvas>
 			</div>
 			<div id="skills" class="box">
-				<h4>Comp&eacute;tences</h4>
-				<div>
-				<canvas id="rect5" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect2" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect3" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect4" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect6" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect7" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect8" class = "c_rect" width="300" height="60"></canvas>
-				<canvas id="rect9" class = "c_rect" width="300" height="60"></canvas>
-				</div>
+				<h5>Comp&eacute;tences</h5>
+				<div><center>
+					<canvas style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp1" width="400" height="300"></canvas>
+					<canvas style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp2" width="400" height="300"></canvas>
+				</center></div>
 			</div>
 			<div id="contact" class="box">
-				<h4>Contact</h4>
-				<div><input value=" @" style="height:35px;width:20px;padding:0;border-top-left-radius:5px;border-bottom-left-radius:5px;" disabled /> 
-				<script>document.write('<input type="email" '/*nobot*/+'value="bay'+'et.t'+'homas@'+/*nobot*/'gmail.com" readonly="readonly" style="height:35px;width:160px;padding:0;text-align:center;border-top-right-radius:5px;border-bottom-right-radius:5px;" />');</script></div>
+				<h5>Contact</h5>
+				<div><input value=" @" style="height:35px;width:20px;padding:0;border-top-left-radius:8px;border-bottom-left-radius:8px;" disabled /> 
+				<script>document.write('<input type="email" '/*nobot*/+'value="bay'+'et.t'+'homas@'+/*nobot*/'gmail.com" readonly="readonly" style="height:35px;width:160px;padding:0;text-align:center;border-top-right-radius:8px;border-bottom-right-radius:8px;" />');</script></div>
 				<br /><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12475.671361035467!2d2.292143048937684!3d48.902305214780554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f7d03e984ab%3A0xce1d395e61609e94!2sGare+d&#39;Asnieres!5e0!3m2!1sfr!2sfr!4v1480010074851"
-				width="100%" height="300px" frameborder="0" style="border:0; margin:0; border-radius: 5px;" allowfullscreen></iframe>
+				width="100%" height="400px" frameborder="0" style="border:0; margin:0; border-radius: 5px;" allowfullscreen></iframe>
 			</div>
+			<footer>
+				site réalisé sans CMS ni Framework | cv-tbayet.fr 2017
+			</footer>
 		</div>
 	</div>
 	<script src="tools.js"></script>
@@ -314,6 +308,8 @@
 		var banner = document.getElementById("banner");
 		var profil = document.getElementById("profil");
 		var videofond = document.getElementById("videofond");
+		var sites = document.getElementById("sites");
+
 		refreshnav();
 		simplebar("bar", 25);
 		simplebar("bar2", 70);
@@ -321,15 +317,8 @@
 		simplebar("bar4", 90);
 		simplebar("bar5", 99);
 
-		drawrect("rect", 55, "Rigor");
-		drawrect("rect2", 100, "Creativity");
-		drawrect("rect3", 33, "Organization");
-		drawrect("rect4", 70, "Adaptability");
-		drawrect("rect5", 85, "Relational");
-		drawrect("rect6", 67, "Analysis");
-		drawrect("rect7", 60, "Enthusiasm");
-		drawrect("rect8", 93, "Maturity");
-		drawrect("rect9", 55, "Coworking");
+		comp("comp1", 1, "Rigoureux,Méthodique,Polyvalent,Structuré,Cohérent,Astucieux,Coopératif,Autodidacte,Observateur,Médiateur");
+		comp("comp2", 2, "Entousiaste,Consciliant,Raisonné,Progressiste,Positif,Intègre,Créatif,Respectueux,Solidaire,Idéaliste");
 
 		drawcircle("ring", 85, "C");
 		drawcircle("ring2", 65, "unix");
@@ -366,7 +355,7 @@
 
 			useMe[element] = setInterval(opendiv, 5);
 			para.style.opacity = j;
-			para.style.backgroundColor = (opn) ? "rgba(20, 20, 20, 0.8)" : "rgba(20, 20, 20, 0)";
+			para.style.backgroundColor = (opn) ? "rgba(20, 20, 20, 0.6)" : "rgba(20, 20, 20, 0)";
 			function opendiv()
 			{
 				if (opn && i == 2)
@@ -431,7 +420,9 @@
 				profil.style.height= "17vh";
 				profil.style.width= "100vw";
 				profil.style.textAlign = "left";
+				sites.style.maxWidth = "160px";
 				banner.style.top = "17vh";
+				banner.style.height = "83vh";
 				banner.style.width = "100%";
 			}
 			else
@@ -439,7 +430,9 @@
 				profil.style.height= "100vh";
 				profil.style.width= "20vw";
 				profil.style.textAlign = "center";
+				sites.style.maxWidth = "400px";
 				banner.style.top = "0";
+				banner.style.height = "100vh";
 				banner.style.width = "80%";
 			}
 			if (x >= videofond.clientWidth)
