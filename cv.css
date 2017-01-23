@@ -181,6 +181,7 @@ ul.navbar li.icon
 		display: inline-block;
 	}
 }
+
 @media screen and (max-width:680px)
 {
 	ul.navbar.responsive
@@ -221,7 +222,7 @@ ul.navbar li.icon
 	border-color: white;
 	box-shadow: 0px 0px 20px #000000;
 }
-*
+
 #skills div
 {
 	text-align: left;
@@ -237,10 +238,20 @@ ul.navbar li.icon
 
 .imgtime
 {
-	width: 90%;
+	transition: background-image 1s;
+	width: 100%;
 	height: auto;
 	border-radius: 50%;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 	cursor: pointer;
+	border-right: solid 1px grey;
+}
+
+.imgtime:focus
+{
+	outline:none;
+	border-right: none;
 }
 
 audio
@@ -331,20 +342,41 @@ audio
 	height: 300px;
 	border-radius: 50%;
 	border-style: solid;
-	vertical-align: middle;
 	text-align: center;
 	margin: 1%;
+	position: relative;
+	vertical-align: middle;
 	background-size: 300px 300px;
+	transition: border-radius 0.5s;
+	transition: background-image 1s;
+}
+
+.showimg:hover
+{
+	border-radius: 3%;
 }
 
 .showimg p
 {
-	margin:0;
-	border-radius: 2%;
-	opacity: 0;
-	color: white;
 	text-shadow: 2px 0px 10px #000000;
+	box-shadow: 0px 1px 5px lavender;
+	box-shadow: 0px -1px 5px lavender;
+	opacity: 0;
+	transition: opacity 0.5s;
+	color: white;
+	padding: 2%;
+	position: absolute;
+	bottom: 0;
+	font-size: 0.8em;
+	background-color: rgba(20, 20, 20, 0.9);
+
 }
+
+.showimg:hover p
+{
+	opacity: 1;
+}
+
 
 #pa1
 {
@@ -352,7 +384,7 @@ audio
 }
 #pa1:hover
 {
-	background-image: url("img/veg.jpg");
+	background-image: url("img/woof.jpg");
 }
 
 #pa2

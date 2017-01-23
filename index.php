@@ -39,14 +39,14 @@
 		<div id="content">
 			<div id="navbardiv"></div>
 			<div id="timeline" class="box">
-				<table style="width:100%;"><tr>
+				<table style="width:100%;border-spacing: 0;"><tr>
 					<td style="width:10%;">
-						<img id="img06" class="imgtime" src="img/42.jpg" onclick='deploy("tdtime", "div06");' onmouseover='zoom("img06", 1)' onmouseleave='zoom("img06", 0)' />
-						<img id="img05" class="imgtime" src="img/guitar.jpg" onclick='deploy("tdtime", "div05");' onmouseover='zoom("img05", 1)' onmouseleave='zoom("img05", 0)' />
-						<img id="img04" class="imgtime" src="img/webcitrus.jpeg" onclick='deploy("tdtime", "div04");' onmouseover='zoom("img04", 1)' onmouseleave='zoom("img04", 0)' />
-						<img id="img03" class="imgtime" src="img/ub.jpg" onclick='deploy("tdtime", "div03");' onmouseover='zoom("img03", 1)' onmouseleave='zoom("img03", 0)' />
-						<img id="img02" class="imgtime" src="img/iut.jpg" onclick='deploy("tdtime", "div02");' onmouseover='zoom("img02", 1)' onmouseleave='zoom("img02", 0)' />
-						<img id="img01" class="imgtime" src="img/lhf.png" onclick='deploy("tdtime", "div01");' onmouseover='zoom("img01", 1)' onmouseleave='zoom("img01", 0)' />
+						<img id="img06" class="imgtime" tabindex="-1" src="img/42.jpg" onclick='deploy("tdtime", "div06", "img06");' onmouseover='zoom("img06", 1)' onmouseleave='zoom("img06", 0)' />
+						<img id="img05" class="imgtime" tabindex="-1" src="img/guitar.jpg" onclick='deploy("tdtime", "div05", "img05");' onmouseover='zoom("img05", 1)' onmouseleave='zoom("img05", 0)' />
+						<img id="img04" class="imgtime" tabindex="-1" src="img/webcitrus.jpeg" onclick='deploy("tdtime", "div04", "img04");' onmouseover='zoom("img04", 1)' onmouseleave='zoom("img04", 0)' />
+						<img id="img03" class="imgtime" tabindex="-1" src="img/ub.jpg" onclick='deploy("tdtime", "div03", "img03");' onmouseover='zoom("img03", 1)' onmouseleave='zoom("img03", 0)' />
+						<img id="img02" class="imgtime" tabindex="-1" src="img/iut.jpg" onclick='deploy("tdtime", "div02", "img02");' onmouseover='zoom("img02", 1)' onmouseleave='zoom("img02", 0)' />
+						<img id="img01" class="imgtime" tabindex="-1" src="img/lhf.png" onclick='deploy("tdtime", "div01", "img01");' onmouseover='zoom("img01", 1)' onmouseleave='zoom("img01", 0)' />
 					</td>
 					<td id="tdtime" style="background-color: white; vertical-align: top;">
 						<div id="div01" class="timediv">
@@ -208,19 +208,19 @@
 			</div>
 			<div id="interest" class="box">
 				<h5>Centres d'int&eacute;r&ecirc;ts</h5>
-				<div id="pa1" class="showimg" onmouseover='showtxt("pa1", 1)' onmouseleave='showtxt("pa1", 0)'>
+				<div id="pa1" class="showimg">
 					<p>Voyager, faire du Woofing (fermes et associations) ou du Couchsurfing, aller randonner et camper.
 					Destinations: Japon, Grèce, Finlande, Caraïbes, Belgique...</p>
 				</div>
-				<div id="pa2" class="showimg" onmouseover='showtxt("pa2", 1)' onmouseleave='showtxt("pa2", 0)'>
+				<div id="pa2" class="showimg">
 					<p>Pratiquer mes instruments (guitare, percussions, piano...), improviser, composer, et écouter
 					de la musique (electronica, trip-hop, breakcore, post-rock, ambiant...).</p>
 				</div>
-				<div id="pa3" class="showimg" onmouseover='showtxt("pa3", 1)' onmouseleave='showtxt("pa3", 0)'>
+				<div id="pa3" class="showimg">
 					<p>Regarder des films et des séries, avec un fort attrait pour la science-fiction. Noter chaque oeuvre vue
 					sur SensCritique et contribuer aux critiques et aux classements.</p>
 				</div>
-				<div id="pa4" class="showimg" onmouseover='showtxt("pa4", 1)' onmouseleave='showtxt("pa4", 0)'>
+				<div id="pa4" class="showimg">
 					<p>Cuisiner végétalien, partager un bon repas avec des proches, suivre des recettes et en improviser.</p>
 				</div>
 			</div>
@@ -286,7 +286,7 @@
 				width="100%" height="400px" frameborder="0" style="border:0; margin:0; border-radius: 5px;" allowfullscreen></iframe>
 			</div>
 			<footer>
-				site réalisé sans CMS ni Framework | cv-tbayet.fr 2017
+				site réalisé from scratch | cv-tbayet.fr 2017
 			</footer>
 		</div>
 	</div>
@@ -345,35 +345,7 @@
 				}
 			}
 		}
-		function showtxt(element, opn)
-		{
-			clearInterval(useMe[element]);
-			var elem = document.getElementById(element);
-			var para = elem.firstElementChild;
-			var i = (opn) ? 49: 2;
-			var j = (opn) ? 1: 0;
-
-			useMe[element] = setInterval(opendiv, 5);
-			para.style.opacity = j;
-			para.style.backgroundColor = (opn) ? "rgba(20, 20, 20, 0.6)" : "rgba(20, 20, 20, 0)";
-			function opendiv()
-			{
-				if (opn && i == 2)
-					clearInterval(useMe[element]);
-				else if (!opn && i == 50)
-					clearInterval(useMe[element]);
-				else
-				{
-					elem.style.borderRadius = i + "%";
-					if (opn)
-						i--;
-					else
-						i++;
-				}
-			}
-		}
-		
-		function deploy(div, divchild)
+		function deploy(div, divchild, img)
 		{
 			var child = document.getElementById(divchild);
 			var parent = document.getElementById(div);
