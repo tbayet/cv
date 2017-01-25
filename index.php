@@ -25,7 +25,7 @@
 		</li>
 	</ul>
 	<div id="profil">
-		<img id="avatar" src="img/avatar.jpg" alt="Photo d'identité" />
+		<img id="avatar" onmouseover="paddit(this, 1)" onmouseout="paddit(this, 0)" src="img/self.jpg" title="Photo de profil" alt="Photo de profil">
 		<div style="display:inline-block; vertical-align:top;">
 			<h2>Thomas Bayet</h2>
 			<h3><?php echo((date("Y") - 1991) - ((date("m") - 7 > 0) ? 0 : 1)); ?> Ans</h3>
@@ -81,7 +81,7 @@
 						<div id="div03" class="timediv">
 							<div style="height:calc(100% - 330px);">
 							<h4>2011-2012</h4>
-                                <p>Cursus de la <b>Licence mathématique-informatique</b> à l'Université de Bourgogne.<br/>
+                                <p>Cursus de la <b>Licence mathématiques-informatique</b> à l'Université de Bourgogne.<br/>
 							L'éventail et la qualité des cours personnellement décevante: trop peu d'informatique et à un niveau trop bas, trop de théorie.<br />
 							Je ne me suis donc investi qu'un semestre, mais ai pu cependant réaliser quelques projets interessants au cours de l'année
 							<ul>
@@ -250,7 +250,7 @@
                 <canvas title="MySQL 30/100" id="ring10" width="100" height="100" onclick='drawcircle("ring10", 30, "sql");'></canvas>
 			</div>
 			<div id="skills" class="box">
-				<h5>Comp&eacute;tences</h5>
+				<h5>Compétences</h5>
 				<div><center>
 					<canvas title="Rigoureux, Méthodique, Polyvalent, Structuré, Cohérent, &#13;Astucieux, Coopératif, Autodidacte, Observateur, Médiateur" style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp1" width="400" height="300"></canvas>
 					<canvas title="Entousiaste, Consciliant, Raisonné, Progressiste, Positif, &#13;Intègre, Créatif, Respectueux, Solidaire, Idéaliste" style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp2" width="400" height="300"></canvas>
@@ -258,7 +258,9 @@
 			</div>
 			<div id="contact" class="box">
 				<h5>Contact</h5>
-				<div><input value=" @" style="height:35px;width:20px;padding:0;border-top-left-radius:8px;border-bottom-left-radius:8px;" disabled /> 
+				<div>
+				<a id="download" href="cv.pdf" download="CV_Thomas_Bayet">Télécharger un résumé en .PDF</a><br /><br /><br />
+				<input value=" @" style="height:35px;width:20px;padding:0;border-top-left-radius:8px;border-bottom-left-radius:8px;" disabled /> 
 				<script>document.write('<input type="email" '/*nobot*/+'value="bay'+'et.t'+'homas@'+/*nobot*/'gmail.com" readonly="readonly" style="height:35px;width:160px;padding:0;text-align:center;border-top-right-radius:8px;border-bottom-right-radius:8px;" />');</script></div>
 				<br /><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12475.671361035467!2d2.292143048937684!3d48.902305214780554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f7d03e984ab%3A0xce1d395e61609e94!2sGare+d&#39;Asnieres!5e0!3m2!1sfr!2sfr!4v1480010074851"
 				width="100%" height="400px" frameborder="0" style="border:0; margin:0; border-radius: 5px;" allowfullscreen></iframe>
@@ -407,6 +409,13 @@
 				navbar.style.right = "auto";
 				navbar.style.width = "auto";
 			}
+		}
+		function paddit(elem, is)
+		{
+			if (is == 1)
+				elem.src = "img/avatar.jpg";
+			else
+				elem.src = "img/self.jpg";
 		}
 	</script>
 </BODY>
