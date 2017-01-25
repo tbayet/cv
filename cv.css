@@ -41,8 +41,8 @@ h5
 	font-size: 45px;
 	font-weight: normal;
 	line-height: 48px;
-	margin: 0;
-	margin-bottom: 30px;;
+	margin:0;
+	margin-bottom:30px;
 }
 
 #profil
@@ -59,6 +59,20 @@ h5
 	background-color: rgba(69, 3, 3, 0.9);
 	text-align: center;
 	box-shadow: 2px 0px 10px #FFFFFF;
+}
+
+span
+{
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 10px;
+	color: lavender;
+	font-size: 42px;
+	z-index: 0;
+	position:fixed;
+	bottom: 30vh;
+	left: 20vw;
+	text-align: center;
+	vertical-align: middle;
 }
 
 #sites
@@ -99,6 +113,7 @@ h5
 	height: 100vh;
 	background-color: rgba(59, 103, 205, 0.2);
 	overflow: auto;
+	-ms-overflow-style: none;
 }
 
 #content
@@ -119,7 +134,6 @@ h5
 	padding: 2%;
 	margin: 2%;
 	margin-top: calc(2% + 20px);
-	display: inside;
 	height: auto;
 	background-color: rgba(220, 220, 220, 0.9);
 	border-radius: 5px;
@@ -215,12 +229,18 @@ ul.navbar li.icon
 	margin-bottom: 2vh;
 	max-width: 80%;
 	max-height: 80%;
-	width: height;
 	border-radius: 50%;
 	border-style: solid;
 	border-width: 2px;
 	border-color: white;
 	box-shadow: 0px 0px 20px #000000;
+	transition: transform 0.5s, -webkit-transform 0.5s, -ms-transform 0.5s;
+}
+#avatar:hover
+{
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
 }
 
 #skills div
@@ -236,22 +256,35 @@ ul.navbar li.icon
 	padding-right: 3%;
 }
 
+#tdimg
+{
+	position: relative;
+	text-align: right;
+}
+
 .imgtime
 {
-	transition: background-image 1s;
-	width: 100%;
+	width: 70%;
 	height: auto;
 	border-radius: 50%;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	cursor: pointer;
-	border-right: solid 1px grey;
+	margin-right: 2px;
+	opacity: 0.6;
+	transition: opacity 0.3s, width 0.3s, height 0.3s;
+}
+.imgtime.selected
+{
+	margin-right: 0;
+	width: 100%;
+	opacity: 1;
+	height: auto;
 }
 
-.imgtime:focus
+.imgtime:hover
 {
-	outline:none;
-	border-right: none;
+	opacity: 1;
 }
 
 audio
@@ -267,6 +300,7 @@ audio
 	height: 300px;
 	border-top-style: solid;
 	border-bottom-style: solid;
+	left:0;
 	overflow: hidden;
 	overflow-x: scroll;
 }
@@ -293,13 +327,14 @@ audio
 	position: absolute;
 	float: left;
 	background-color: rgba(50,50,50, 0.7);
-	width: 40px;
+	width: 50px;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	transition:opacity 0.5s;
 }
 
 .butright
@@ -312,28 +347,44 @@ audio
 	position: absolute;
 	float: left;
 	background-color: rgba(50,50,50, 0.7);
-	width: 40px;
-	margin-left: calc(62vw - 40px);
+	width: 50px;
+	margin-left: calc(62vw - 50px);
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	transition:opacity 0.5s;
+}
+
+.butleft:hover, .butright:hover
+{
+	opacity: 0.3;
 }
 
 .timediv
 {
-	display:none;
+	max-width:0;
+	max-height:0;
+	overflow: hidden;
 	text-align: left;
 	background-color: white;
-	height: 100%;
-	top:0;
-	bottom:0;
-	opacity: 0;
 	padding-left: 1%;
 	padding-right: 1%;
+	opacity: 0;
+	transition: opacity 2s;
+	display: none;
 }
+.timediv.opaque
+{
+	display: inline-table;
+	height: 100%;
+	width: auto;
+	overflow: visible;
+	opacity: 1;
+}
+
 
 .showimg
 {
@@ -347,8 +398,7 @@ audio
 	position: relative;
 	vertical-align: middle;
 	background-size: 300px 300px;
-	transition: border-radius 0.5s;
-	transition: background-image 1s;
+	transition: background-image 1s, border-radius 0.5s;
 }
 
 .showimg:hover
@@ -359,8 +409,7 @@ audio
 .showimg p
 {
 	text-shadow: 2px 0px 10px #000000;
-	box-shadow: 0px 1px 5px lavender;
-	box-shadow: 0px -1px 5px lavender;
+	box-shadow: 0px 1px 5px lavender, 0px -1px 5px lavender;
 	opacity: 0;
 	transition: opacity 0.5s;
 	color: white;
@@ -412,6 +461,17 @@ audio
 #pa4:hover
 {
 	background-image: url("img/veg.jpg");
+}
+
+#knowledge canvas
+{
+	transition: transform 0.4s;
+	margin: 7px;
+}
+
+#knowledge canvas:hover
+{
+	transform: scale(1.25);
 }
 
 footer

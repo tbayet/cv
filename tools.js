@@ -158,8 +158,8 @@ function drawcircle(idcanvas, percent, wordt)
 	//circle filled in the center
 	context.beginPath();
 	context.lineWidth = 1;
-	context.fillStyle = "#1C9080";
-	context.arc(50, 50, 34, 0, Math.PI * 2);
+	context.fillStyle = "#444";
+	context.arc(50, 50, 50, 0, Math.PI * 2);
 	context.closePath();
 	context.fill();
 	//text adding
@@ -169,16 +169,16 @@ function drawcircle(idcanvas, percent, wordt)
 	context.textAlign = "center";
 	context.fillText(wordt, 51, 49);
 	//%percent of the rest;
-	context.beginPath();
-	context.lineWidth = 16;
-	context.strokeStyle = "#444";
-	context.arc(50, 50, 39, 0, Math.PI * 2);
+/*	context.beginPath();
+	context.lineWidth = 10;
+	context.strokeStyle = "#691107";
+	context.arc(50, 50, 44, 0, Math.PI * 2);
 	context.stroke();
 	context.beginPath();
 	context.lineWidth = 4;
-	context.strokeStyle = "black";
+	context.strokeStyle = "#600D06";
 	context.arc(50, 50, 44, 0, Math.PI * 2);
-	context.stroke();
+	context.stroke();*/
 	
 	inter = setInterval(letsdraw, 50, context, cpt);
 	function letsdraw()
@@ -208,26 +208,26 @@ function drawcircle(idcanvas, percent, wordt)
 		}
 		//circle filled in the center
 		context.beginPath();
-		context.lineWidth = 2;
-		context.strokeStyle = "#0B614B";
-		context.arc(50, 50, 30, Math.PI * piA, Math.PI * piB);
-		context.stroke();	
+		context.lineWidth = 4;
+		context.strokeStyle = "#555";
+		context.arc(50, 50, 36, Math.PI * piA, Math.PI * piB);
+		context.stroke();
 		//%percent of the value;
 		context.beginPath();
-		context.lineWidth = 16;
+		context.lineWidth = 10;
 		context.strokeStyle = "orange";
-		context.arc(50, 50, 39, Math.PI * piA, Math.PI * piB);
+		context.arc(50, 50, 45, Math.PI * piA, Math.PI * piB);
 		context.stroke();
 		context.beginPath();
-		context.lineWidth = 4;
-		context.strokeStyle = "red";
-		context.arc(50, 50, 33, Math.PI * piA, Math.PI * piB);
+		context.lineWidth = 2;
+		context.strokeStyle = "#FF561A";
+		context.arc(50, 50, 47, Math.PI * piA, Math.PI * piB);
 		context.stroke();
 		//extern circle
 		context.beginPath();
-		context.lineWidth = 1;
-		context.strokeStyle = "yellow";
-		context.arc(50, 50, 47, Math.PI * piA, Math.PI * piB);
+		context.lineWidth = 2;
+		context.strokeStyle = "#444";
+		context.arc(50, 50, 49, Math.PI * piA, Math.PI * piB);
 		context.stroke();
 		cpt++;
 	}

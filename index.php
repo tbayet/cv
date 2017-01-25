@@ -9,9 +9,10 @@
 	<script src="comp.js"></script>
 </HEAD>
 <BODY onload="resizeVideo()" onresize="resizeVideo();refreshnav();">
-	<video id="videofond" style="padding: 0px; margin: 0px; position:fixed; left:0; top:0; min-width:100%; z-index: -1" autoplay="" loop="" muted="">
-		<source src="http://www.lamoutarde.fr/wp-content/themes/daynnight/videos/working.mp4" type="video/mp4" />
+	<video id="videofond" style="padding: 0; margin: 0; position:fixed; left:0; top:0; min-width:100%; z-index: -1" autoplay="" loop="" muted="">
+		<source src="film.mp4" type="video/mp4" />
 	</video>
+    <span>Développeur informatique</span>
 	<ul class="navbar" id="navbar">
 		<li><a href="#timeline">Timeline</a></li>
 		<li><a href="#interest">Centres d'intérêt</a></li>
@@ -24,14 +25,14 @@
 		</li>
 	</ul>
 	<div id="profil">
-		<img id="avatar" src="img/avatar.jpg" alt="Photo d'identité" onmouseover='zoom("avatar", 1)' onmouseleave='zoom("avatar", 0)' />
+		<img id="avatar" src="img/avatar.jpg" alt="Photo d'identité" />
 		<div style="display:inline-block; vertical-align:top;">
 			<h2>Thomas Bayet</h2>
 			<h3><?php echo((date("Y") - 1991) - ((date("m") - 7 > 0) ? 0 : 1)); ?> Ans</h3>
 		</div>
 		<div id="sites">
-			<a href="http://www.linkedin.com/in/tbayet" target="_blank"><img width="90%" src="img/linked.png" /></a>
-			<a href="https://github.com/tbayet" target="_blank"><img width="90%" src="img/github.png" /></a>
+			<a alt="linkedin" title="linkedin" href="http://www.linkedin.com/in/tbayet" target="_blank"><img width="90%" src="img/linked.png" /></a>
+			<a alt="github" title="github" href="https://github.com/tbayet" target="_blank"><img width="90%" src="img/github.png" /></a>
 		</div>
 	</div>
 	
@@ -39,44 +40,36 @@
 		<div id="content">
 			<div id="navbardiv"></div>
 			<div id="timeline" class="box">
-				<table style="width:100%;border-spacing: 0;"><tr>
-					<td style="width:10%;">
-						<img id="img06" class="imgtime" tabindex="-1" src="img/42.jpg" onclick='deploy("tdtime", "div06", "img06");' onmouseover='zoom("img06", 1)' onmouseleave='zoom("img06", 0)' />
-						<img id="img05" class="imgtime" tabindex="-1" src="img/guitar.jpg" onclick='deploy("tdtime", "div05", "img05");' onmouseover='zoom("img05", 1)' onmouseleave='zoom("img05", 0)' />
-						<img id="img04" class="imgtime" tabindex="-1" src="img/webcitrus.jpeg" onclick='deploy("tdtime", "div04", "img04");' onmouseover='zoom("img04", 1)' onmouseleave='zoom("img04", 0)' />
-						<img id="img03" class="imgtime" tabindex="-1" src="img/ub.jpg" onclick='deploy("tdtime", "div03", "img03");' onmouseover='zoom("img03", 1)' onmouseleave='zoom("img03", 0)' />
-						<img id="img02" class="imgtime" tabindex="-1" src="img/iut.jpg" onclick='deploy("tdtime", "div02", "img02");' onmouseover='zoom("img02", 1)' onmouseleave='zoom("img02", 0)' />
-						<img id="img01" class="imgtime" tabindex="-1" src="img/lhf.png" onclick='deploy("tdtime", "div01", "img01");' onmouseover='zoom("img01", 1)' onmouseleave='zoom("img01", 0)' />
+				<table cellspacing="0" cellpadding="0" style="width:100%; border:none;"><tr style="border: none;">
+					<td id="tdimg" style="width:10%;">
+						<img id="img06" class="imgtime selected" src="img/42.jpg" onclick='deploy("tdtime", "div06", "img06", "tdimg");' />
+						<img id="img05" class="imgtime" src="img/guitar.jpg" onclick='deploy("tdtime", "div05", "img05", "tdimg");' />
+						<img id="img04" class="imgtime" src="img/webcitrus.jpeg" onclick='deploy("tdtime", "div04", "img04", "tdimg");' />
+						<img id="img03" class="imgtime" src="img/ub.jpg" onclick='deploy("tdtime", "div03", "img03", "tdimg");' />
+						<img id="img02" class="imgtime" src="img/iut.jpg" onclick='deploy("tdtime", "div02", "img02", "tdimg");' />
 					</td>
 					<td id="tdtime" style="background-color: white; vertical-align: top;">
-						<div id="div01" class="timediv">
-							<h4>2008-2009</h4>
-							<img src="img/bac.jpg" width="300px" />
-							<p>Obtention du <b>Baccalauréat Scientifique</b> au lycée Hippolyte Fontaine à Dijon.
-							J'y ai choisi de suivre le cursus avec l'option SVT, spécialisation Mathématiques, et un module facultatif d'Art.
-							J'ai aussi étudié le grec ancien et le latin.</p>
-						</div>
 						<div id="div02" class="timediv">
-							<div style="display:bloc; height:calc(100% - 330px);">
+							<div style="height:calc(100% - 330px);">
 							<h4>2009-2011</h4>
-							<p>Obtention du <b>Diplôme Universitaire Technologique (DUT) en informatique</b> à l'IUT de Dijon.
-							Le cursus principal initie brièvement aux bases dont l'intéraction matériel-logiciel, le binaire, le C et le Shell.
-							La globalité des cours portent ensuite sur l'algorithmique, l'embarqué, la programmation objet orienté (POO), les bases de données et les diagrammes.
-							En plus de l'informatique, la formation offre une diversité de modules, nous interessant aussi bien au droit et à l'économie 
-							qu'à la communication, au management, à l'anglais ou aux mathématiques.</p>
-							<p>Nous avons réalisé des projets seuls: <i>un Kalaha (jeu de plateau africain) Player.vs.Computer en java</i>, ou en groupe: <i>un moteur 2D de jeux en C#</i>.
-							Le cursus se concluant par un stage de 11 semaines que j'ai effectué au service informatique du Conseil Régionnal de Bourgogne,
-							afin de reprendre le développement d'un programme existant sur l'intranet pour la gestion de projets et de soummettre un cahier des charges visant à remplacer cet outil.</p>
+							<p>Obtention du <b>Diplôme Universitaire Technologique (DUT) en informatique</b> à l'IUT de Dijon.<br />
+							La moitié des cours portent sur l'informatique et l'autre sur divers modules plus généraux (anglais, management, économie-droit, expression, etc...)
 							<ul>
-								<li>Programmation Objet Orienté.</li>
-								<li>Analyse, suivi et developpement d'un projet.</li>
-								<li>Travail en groupe.</li>
-							</ul>
-							<p>J'ai aussi grandement pris part à la vie associative de l'iut en rejoignant l'ETIQ (ETudiant InformatiQue) :
+                                <li>Algorithmique</li>
+                                <li>Programmation Objet Orienté</li>
+                                <li>Bases de données et diagrammes</li>
+                                <li>Electronique et embarqué</li>
+								<li>Analyse, suivi et developpement d'un projet</li>
+								<li>Travail en groupe</li>
+                                </ul></p>
+                                <p>Réalisation de deux projets annuels: <i>un Kalaha (jeu de plateau africain) Player.vs.IA en java</i> en solo, et <i>un moteur 2D de jeux en C#</i> en groupe.</p>
+                                <p><b>Stage de 11 semaines</b> au service informatique du Conseil Régionnal de Bourgogne: <br />
+                                    <i>Maintenance sur un module PHP de l'intranet existant pour la gestion de projets, analyse et développement d'un cahier des charges pour remplacer le module.</i></p>
+                            <p>J'ai aussi pris part à la vie associative de l'iut en rejoignant l'ETIQ (ETudiant InformatiQue) :
 							<ul>
 								<li>Organisation du local et des activités proposées.</li>
-								<li>Organisation d'évènements (intégrations, soirées étudiantes, fêtes de fin d'année).</li>
-								<li>Organisation du festival .dijon//SAITEN.</li>
+								<li>Organisation d'évènements (intégrations, soirées étudiantes, stands, fêtes de fin d'année).</li>
+								<li>Organisation et sécurité du festival .dijon//SAITEN.</li>
 							</ul>
 							</p></div>
 							<div class="diapo">
@@ -86,13 +79,13 @@
 							</div>
 						</div>
 						<div id="div03" class="timediv">
-							<div style="display:bloc; height:calc(100% - 330px);">
+							<div style="height:calc(100% - 330px);">
 							<h4>2011-2012</h4>
-							<p>Souhaitant améliorer mon niveau d'étude et mes compétences, j'ai rejoins le cursus de la Licence mathématique-informatique à l'Université de Bourgogne.
-							Malheureusement, l'éventail et la qualité des cours m'a terriblement déçu: très peu de leçons d'informatique et un niveau trop bas, donc ennuyant.
-							Je n'ai donc fait qu'un semestre, mais ai pu cependant réaliser quelques projets interessants
+                                <p>Cursus de la <b>Licence mathématique-informatique</b> à l'Université de Bourgogne.<br/>
+							L'éventail et la qualité des cours personnellement décevante: trop peu d'informatique et à un niveau trop bas, trop de théorie.<br />
+							Je ne me suis donc investi qu'un semestre, mais ai pu cependant réaliser quelques projets interessants au cours de l'année
 							<ul>
-								<li>Simulation d'un robot aspirateur avec interface graphique en java.</li>
+								<li>Programmation d'un robot aspirateur (algorithme de contour et de balayage) avec interface graphique en java.</li>
 								<li>Modélisation en 3D d'un jeu d'échecs en POV-Ray.</li>
 							</ul>
 							</p></div>
@@ -103,18 +96,17 @@
 							</div>
 						</div>
 						<div id="div04" class="timediv">
-							<div style="display:bloc; height:calc(100% - 330px);"><h4>2012-2013</h4>
-							<p>La personne avec qui j'ai travaillé sur le projet du moteur de jeux 2D m'a proposé de l'utiliser pour développer un jeu de rythme.
-							Nous avons lancé une campagne de financement participatif sur Ulule afin de nous aider à monter une entreprise sur Dijon. La société Webcitrus
+							<div style="height:calc(100% - 330px);"><h4>2012-2013</h4>
+                                <p><i>La personne avec qui j'ai travaillé sur le projet du moteur de jeux 2D m'a proposé de l'utiliser pour <b>développer un jeu de rythme</b>.</i><br />
+                                    Lancement d'une campagne de financement participatif sur <a href="https://fr.ulule.com/8btm/" target="_blank">Ulule.fr</a> afin de nous aider à <b>monter une entreprise</b> sur Dijon. La société Webcitrus
 							démarre ainsi son activité en février 2013:
 							<ul>
 								<li>Dépannage et cours d'informatique à domicile (déplacements en vélo).</li>
-								<li>Développement logiciel pour professionnels.</li>
-								<li>Vente/conseils de matériel et montage d'ordinateurs.</li>
-								<li>Création du jeu vidéo 8bit the musical (renommé ensuite Old School Musical).</li>
+								<li>Création du jeu vidéo 8bit the musical (renommé ensuite <a href="http://www.osmgame.com/fr/" target="_blank">Old School Musical</a> ).</li>
+                                <li>Vente/conseils de matériel et montage d'ordinateurs.</li>
+                                <li>Développement web et logiciel.</li>
 							</ul>
-							J'assure la majorité des dépannages, développant ainsi mon relationnel avec les clients et travaillant sur le jeu au bureau entre deux trajets. L'entreprise tiens financièrement mais n'arrive pas à gagner davantage de clientèle.
-							Un choix très certainement immature de notre part d'avoir voulu nous charger de la communication et de la promotion au lieu d'embaucher quelqu'un dont c'est le métier.
+							J'assure la majorité des dépannages, développant ainsi mon relationnel et travaillant sur le jeu au bureau entre deux clients. L'entreprise ne rapporte pas suffisemment, faute de communication, et ferme à la fin de l'année.
 							</p></div>
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div04", -1);' onmouseleave='slide("div04", 0);'><p><b><</b></p></div>
@@ -123,18 +115,18 @@
 							</div>
 						</div>
 						<div id="div05" class="timediv">
-							<div style="display:bloc; height:calc(100% - 330px);">
+							<div style="height:calc(100% - 330px);">
 							<h4>2014-2015</h4>
-							<p>Notre entreprise Webcitrus a fermé. Je me lance dans le graphisme de jeux-vidéos 2D (pixel-art), confectionne des mock'up,
-							 continue de travailler sur le projet Old School Musical. Je me met durement à la musique, perfectionne la pratique de mes instruments 
-							 pour finalement découvrir et adopter la MOA (Musique Assistée par Ordinateur) afin de composer.
+                                <p><b>Graphisme de jeux-vidéos 2D</b> (pixel-art), confection de mock'up pour des projets personnels et realisation de commandes.<br />
+                                Quitte l'équipe du projet <a href="http://www.osmgame.com/fr/" target="_blank">Old School Musical</a> (perte de motivation).<br />
+                                    Travail régulier de la musique, <b>pratique de la percussion, de la guitare, et autres</b>.
+                                    Découverte de la <b>MAO (Musique Assistée par Ordinateur)</b>, des instruments virtuels (via MIDI) et composition.
 							<ul>
 								<li>Notions graphiques : calques, sprites, tilesets, palettes, animations.</li>
 								<li>Notions en MAO : sampler, VST (Virtual Studio Technology), fréquences et modulations.</li>
-								<li>Logiciels : Renoise, FL Studio, Audacity, GraphicsGale.</li>
+                                    <li><i>Logiciels : Renoise, FL Studio, Audacity, GraphicsGale.</i></li>
 							</ul>
-							J'ai ensuite quitté l'équipe d'Old School Musical.
-							Quelques extraits de mon travail<br />
+							Quelques extraits de compositions<br />
 							<br /><audio controls="controls">
 								<source src="music/sample1.wav" type="audio/wav" />
 								<source src="music/sample1.mp3" type="audio/mp3" />
@@ -172,30 +164,27 @@
 								<div><img src="img/mu1.png" /><img src="img/mu2.png" /><img src="img/mu3.png" /><img src="img/mu4.png" /><img src="img/mu5.png" /></div>
 							</div>
 						</div>
-						<div id="div06" class="timediv">
-							<div style="display:bloc; height:calc(100% - 330px);">
+						<div id="div06" class="timediv opaque">
+							<div style="height:calc(100% - 330px);">
 							<h4>2015-Aujourd'hui</h4>
-							<p>J'ai entendu parler de l'école 42 de Xavier Niel, alors j'ai passé les tests en ligne, puis la piscine (épreuve intensive de 4 semaines),
-							pour finalement être accepté en tant qu'étudiant. Je ne saurais vanter ce cursus en étant synthétique, mais c'est de loin le meilleur système éducatif 
+                                <p>Piscine C en juillet (épreuves sur 4 semaines d'apprentissage) puis entrée à l'<b>Ecole 42</b> en novembre. <br />
+                                <i>Je ne saurais vanter ce cursus en étant synthétique, mais c'est de loin le meilleur système éducatif
 							que je connaisse. Il nous apprend à être pédagogue, à bien comprendre tout ce qu'on fait, à travailler en groupe, à être autonome, à persévérer...
-							On se doit de développer avec une norme, en sécurisant nos programmes et sans fuites mémoires.
-							Ce CV en ligne, que j'ai entièrement réalisé de zéro, est une façon de vous prouver que peu importe la technologie (je n'avais fait que très peu de web et jamais de javascript), je suis 
-							capable de comprendre, de m'adapter et de me dépêtrer seul grace à internet.
-							Voici une liste de projets signifiants terminés ou entammés depuis mon entrée à l'école :
+                                    On se doit de développer avec une norme, en sécurisant nos programmes et en maîtrisant la mémoire solicitée.</i><br />
+                                    Ce <b>CV en ligne</b>, que j'ai entièrement réalisé de zéro, est aussi une façon de montrer mes capacités.
+							Sélection de projets terminés ou entammés depuis mon entrée à l'école :
 							<ul>
+                                    <li><b>Piscine (C - PHP)</b> : apprentissage intensif d'une nouvelle technologie.</li>
 								<li>Sudoku : algorithme de backtracking pour afficher et résoudre une grille de sudoku.</li>
-								<li>Libft : recoder les fonctions de la librairie standard puis y ajouter les miennes afin de l'utiliser dans les autres projets.</li>
+                                    <li><b>Libft</b> : recoder les fonctions de la librairie standard puis y ajouter les miennes afin de l'utiliser dans les autres projets.</li>
 								<li>Fillit : algorithme de placement pour emboiter au mieux des pièces de tétris.</li>
-								<li>Get_next_line : fonction pour récupérer la prochaine ligne d'un ficher en lecture avec un buffer choisi.</li>
-								<li>Ft_printf : recoder la fonction "printf".</li>
 								<li>Ft_ls : recoder le programme "ls"</li>
 								<li>Ft_select : afficher avec la librairie termcaps une liste d'élements à sélectionner dynamiquement.</li>
-								<li>42sh : recoder un shell (interpréteur de commandes)</li>
+                                    <li><b>42sh</b> (groupe) : recoder un shell (interpréteur de commandes)</li>
 								<li>(en cours)npuzzle : afficher et résoudre par 3 algorithmes de chemin différents un jeu de taquin de quelque taille.</li>
-								<li>(en cours)Easyfansub: site web dynamique facilitant la traduction et la modification en équipe de fichiers SRT.</li>
+								<li>(en cours)untitled: site web dynamique facilitant la traduction et la modification en équipe de fichiers SRT.</li>
 							</ul>
-							Beaucoup de conférences en rapport avec notre secteur nous sont proposées dans l'amphithéatre. J'ai évidemment rejoins le groupe de musique 
-							de l'école afin de proposer des concerts et participe aux activités d'autres associations.
+							Participation au Club Music42 de l'école afin de jouer ensembles et proposer des concerts lors de nos évènements.
 							</p></div>
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div06", -1);' onmouseleave='slide("div06", 0);'><p><b><</b></p></div>
@@ -217,17 +206,14 @@
 					de la musique (electronica, trip-hop, breakcore, post-rock, ambiant...).</p>
 				</div>
 				<div id="pa3" class="showimg">
-					<p>Regarder des films et des séries, avec un fort attrait pour la science-fiction. Noter chaque oeuvre vue
+					<p>Regarder des films et des séries, avec une préférence pour la science-fiction. Répertorier chaque oeuvre vue
 					sur SensCritique et contribuer aux critiques et aux classements.</p>
 				</div>
 				<div id="pa4" class="showimg">
-					<p>Cuisiner végétalien, partager un bon repas avec des proches, suivre des recettes et en improviser.</p>
+					<p>Cuisiner en improvisant, plutôt salé, et partager un bon repas avec des proches.</p>
 				</div>
 			</div>
-			<div class="box">
-				dfsAAAfsff
-			</div>
-			<div id="langs" class="box" style="align:center; text-align:center; vertical-align:top;">
+			<div id="langs" class="box" style="text-align:center; text-align:center; vertical-align:top;">
 				<h5>Langues</h5>
 				<table style="display:inline-table;border-bottom-style:solid;"><tr>
 					<td>Anglais</td>
@@ -252,30 +238,22 @@
 			</div>
 			<div id="knowledge" class="box">
 				<h5>Connaissances</h5>
-				<canvas id="ring" width="100" height="100" onclick='drawcircle("ring", 85, "C");'
-				onmouseover='zoom("ring", 1)' onmouseleave='zoom("ring", 0)'></canvas>
-				<canvas id="ring2" width="100" height="100" onclick='drawcircle("ring2", 65, "unix");'
-				onmouseover='zoom("ring2", 1)' onmouseleave='zoom("ring2", 0)'></canvas>
-				<canvas id="ring3" width="100" height="100" onclick='drawcircle("ring3", 90, "html");'
-				onmouseover='zoom("ring3", 1)' onmouseleave='zoom("ring3", 0)'></canvas>
-				<canvas id="ring4" width="100" height="100" onclick='drawcircle("ring4", 55, "css");'
-				onmouseover='zoom("ring4", 1)' onmouseleave='zoom("ring4", 0)'></canvas>
-				<canvas id="ring5" width="100" height="100" onclick='drawcircle("ring5", 75, "js");'
-				onmouseover='zoom("ring5", 1)' onmouseleave='zoom("ring5", 0)'></canvas>
-				<canvas id="ring6" width="100" height="100" onclick='drawcircle("ring6", 30, "php");'
-				onmouseover='zoom("ring6", 1)' onmouseleave='zoom("ring6", 0)'></canvas>
-				<canvas id="ring7" width="100" height="100" onclick='drawcircle("ring7", 20, "java");'
-				onmouseover='zoom("ring7", 1)' onmouseleave='zoom("ring7", 0)'></canvas>
-				<canvas id="ring8" width="100" height="100" onclick='drawcircle("ring8", 30, "c++");'
-				onmouseover='zoom("ring8", 1)' onmouseleave='zoom("ring8", 0)'></canvas>
-				<canvas id="ring9" width="100" height="100" onclick='drawcircle("ring9", 15, "c#");'
-				onmouseover='zoom("ring9", 1)' onmouseleave='zoom("ring9", 0)'></canvas>
+				<canvas title="C 95/100" id="ring" width="100" height="100" onclick='drawcircle("ring", 95, "C");'></canvas>
+				<canvas title="Shell script 60/100" id="ring2" width="100" height="100" onclick='drawcircle("ring2", 60, "shell");'></canvas>
+				<canvas title="Java 15/100" id="ring3" width="100" height="100" onclick='drawcircle("ring3", 15, "java");'></canvas>
+				<canvas title="C++ 20/100" id="ring4" width="100" height="100" onclick='drawcircle("ring4", 20, "c++");'></canvas>
+				<canvas title="C# 15/100" id="ring5" width="100" height="100" onclick='drawcircle("ring5", 15, "c#");'></canvas>
+				<canvas title="HTML 90/100" id="ring6" width="100" height="100" onclick='drawcircle("ring6", 90, "html");'></canvas>
+				<canvas title="CSS 70/100" id="ring7" width="100" height="100" onclick='drawcircle("ring7", 70, "css");'></canvas>
+				<canvas title="Javascript 65/100" id="ring8" width="100" height="100" onclick='drawcircle("ring8", 65, "js")'></canvas>
+				<canvas title="PHP 50/100" id="ring9" width="100" height="100" onclick='drawcircle("ring9", 50, "php");'></canvas>
+                <canvas title="MySQL 30/100" id="ring10" width="100" height="100" onclick='drawcircle("ring10", 30, "sql");'></canvas>
 			</div>
 			<div id="skills" class="box">
 				<h5>Comp&eacute;tences</h5>
 				<div><center>
-					<canvas style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp1" width="400" height="300"></canvas>
-					<canvas style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp2" width="400" height="300"></canvas>
+					<canvas title="Rigoureux, Méthodique, Polyvalent, Structuré, Cohérent, &#13;Astucieux, Coopératif, Autodidacte, Observateur, Médiateur" style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp1" width="400" height="300"></canvas>
+					<canvas title="Entousiaste, Consciliant, Raisonné, Progressiste, Positif, &#13;Intègre, Créatif, Respectueux, Solidaire, Idéaliste" style="box-shadow: 2px 0px 10px #000;border-top-left-radius:10px;border-top-right-radius:10px;margin-left:2%; margin-right:2%;" id="comp2" width="400" height="300"></canvas>
 				</center></div>
 			</div>
 			<div id="contact" class="box">
@@ -292,14 +270,6 @@
 	</div>
 	<script src="tools.js"></script>
 	<script>
-	function zoom(id, isin)
-	{
-		var elem = document.getElementById(id);
-		if (isin == 0)
-			elem.style.transform = "scale(1)";
-		else
-			elem.style.transform = "scale(1.10)";
-	}
 	"use strict";
 		var useMe = new Object();
 		var content = document.getElementById("content");
@@ -320,61 +290,49 @@
 		comp("comp1", 1, "Rigoureux,Méthodique,Polyvalent,Structuré,Cohérent,Astucieux,Coopératif,Autodidacte,Observateur,Médiateur");
 		comp("comp2", 2, "Entousiaste,Consciliant,Raisonné,Progressiste,Positif,Intègre,Créatif,Respectueux,Solidaire,Idéaliste");
 
-		drawcircle("ring", 85, "C");
-		drawcircle("ring2", 65, "unix");
-		drawcircle("ring3", 90, "html");
-		drawcircle("ring4", 55, "css");
-		drawcircle("ring5", 75, "js");
-		drawcircle("ring6", 30, "php");
-		drawcircle("ring7", 20, "java");
-		drawcircle("ring8", 30, "c++");
-		drawcircle("ring9", 15, "c#");
+		drawcircle("ring", 95, "C");
+		drawcircle("ring2", 60, "shell");
+		drawcircle("ring3", 15, "java");
+		drawcircle("ring4", 20, "c++");
+		drawcircle("ring5", 15, "c#");
+		drawcircle("ring6", 90, "html");
+		drawcircle("ring7", 70, "css");
+        drawcircle("ring8", 65, "js")
+		drawcircle("ring9", 50, "php");
+        drawcircle("ring10", 30, "sql");
 		
 		function slide(parent, sens)
 		{
 			var elem = document.getElementById(parent).lastElementChild;
+            function scrollit()
+            {
+                elem.scrollLeft += (sens * 2);
+            }
 			if (sens == 0)
 				clearInterval(useMe[elem]);
 			else
 			{
 				useMe[elem] = setInterval(scrollit, 1);
-
-				function scrollit()
-				{
-					elem.scrollLeft += (sens * 2);
-				}
 			}
 		}
-		function deploy(div, divchild, img)
+		function deploy(div, divchild, imag, tdimg)
 		{
 			var child = document.getElementById(divchild);
 			var parent = document.getElementById(div);
+            var parentimg = document.getElementById(tdimg);
+            var img = document.getElementById(imag);
 			var children = parent.children;
+            var childrenimg = parentimg.children;
 			var i = 0;
-			var inter;
-			var opacity;
-
 			while (i < children.length)
 			{
-				if (children[i].style.display.localeCompare("none") != 0)
-					children[i].style.display = "none";
+
+                childrenimg[i].className = "imgtime";
+                children[i].className = "timediv";
 				i++;
 			}
-			child.style.opacity = 0;
-			child.style.display = "inline-table";
-			child.style.height = "100%";
-			opacity = 0;
-			inter = setInterval(changeOpacity, 100, child);
-
-			function changeOpacity(elem)
-			{
-				elem.style.opacity = opacity;
-				if (opacity > 1)
-				{
-					clearInterval(inter);
-				}
-				opacity += 0.1;
-			}
+			img.className += " selected";
+            child.className += " opaque";
 		}
 		
 		function openNav() {
