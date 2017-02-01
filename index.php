@@ -5,8 +5,6 @@
 	<title>Thomas Bayet</title>
 	<link rel="stylesheet" type="text/css" href="cv.css"/>
 	<link rel="icon" type="image/png" href="favicon.png" />
-	<script src="tools.js"></script>
-	<script src="comp.js"></script>
 </HEAD>
 <BODY onload="resizeVideo()" onresize="resizeVideo();refreshnav();">
 	<video id="videofond" style="padding: 0; margin: 0; position:fixed; left:0; top:0; min-width:100%; z-index: -1" autoplay="" loop="" muted="">
@@ -273,7 +271,7 @@
 			</footer>
 		</div>
 	</div>
-	<script src="tools.js"></script>
     <script src="comp.js"></script>
+	<script src="tools.js"></script>
 </BODY>
 </HTML>
