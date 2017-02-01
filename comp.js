@@ -99,9 +99,9 @@ function comp(idcanvas, type, valuesstr)
 	context.textBaseline = "middle";
 	context.textAlign = "left";
 	if (type === 1)
-		context.fillText("term -Professionnelles", 100, 20);
+		context.fillText("- Professionnelles", 100, 20);
 	else
-		context.fillText("term -Personnelles", 100, 20);
+		context.fillText("- Personnelles", 100, 20);
 
 	//console content
 	context.beginPath();
@@ -184,7 +184,7 @@ function comp(idcanvas, type, valuesstr)
 		
 		animate();
 		i += 3;
-		setTimeout(boucle, 2000);
+		setTimeout(boucle, 4000);
 
 		function animate()
 		{

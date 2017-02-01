@@ -232,3 +232,149 @@ function drawcircle(idcanvas, percent, wordt)
 		cpt++;
 	}
 }
+
+"use strict";
+var useMe = new Object();
+var content = document.getElementById("content");
+var navbar = document.getElementById("navbar");
+var navbardiv = document.getElementById("navbardiv");
+var banner = document.getElementById("banner");
+var profil = document.getElementById("profil");
+var videofond = document.getElementById("videofond");
+var sites = document.getElementById("sites");
+
+refreshnav();
+simplebar("bar", 25);
+simplebar("bar2", 65);
+simplebar("bar3", 60);
+simplebar("bar4", 80);
+simplebar("bar5", 99);
+
+comp("comp1", 1, "Rigoureux,Méthodique,Polyvalent,Structuré,Cohérent,Astucieux,Coopératif,Autodidacte,Observateur,Médiateur");
+comp("comp2", 2, "Entousiaste,Consciliant,Raisonné,Progressiste,Positif,Intègre,Créatif,Respectueux,Solidaire,Idéaliste");
+
+drawcircle("ring", 95, "C");
+drawcircle("ring2", 40, "shell");
+drawcircle("ring3", 15, "java");
+drawcircle("ring4", 20, "c++");
+drawcircle("ring5", 15, "c#");
+drawcircle("ring6", 90, "html");
+drawcircle("ring7", 70, "css");
+drawcircle("ring8", 65, "js")
+drawcircle("ring9", 50, "php");
+drawcircle("ring10", 30, "sql");
+
+function slide(parent, sens)
+{
+    var elem = document.getElementById(parent).lastElementChild;
+    function scrollit()
+    {
+        elem.scrollLeft += (sens * 2);
+    }
+    if (sens == 0)
+        clearInterval(useMe[elem]);
+    else
+    {
+        useMe[elem] = setInterval(scrollit, 1);
+    }
+}
+function deploy(div, divchild, imag, tdimg)
+{
+    var child = document.getElementById(divchild);
+    var parent = document.getElementById(div);
+    var parentimg = document.getElementById(tdimg);
+    var img = document.getElementById(imag);
+    var children = parent.children;
+    var childrenimg = parentimg.children;
+    var i = 0;
+    while (i < children.length)
+    {
+
+        childrenimg[i].className = "imgtime";
+        children[i].className = "timediv";
+        i++;
+    }
+    img.className += " selected";
+    child.className += " opaque";
+}
+
+function openNav() {
+    if (navbar.className === "navbar")
+        navbar.className += " responsive";
+    else
+        navbar.className = "navbar";
+}
+function resizeVideo()
+{
+    var x = document.body.clientWidth;
+    var y = document.documentElement.clientHeight;
+    if (x < y)
+    {
+        profil.style.height= "17vh";
+        profil.style.width= "100vw";
+        profil.style.textAlign = "left";
+        sites.style.maxWidth = "160px";
+        banner.style.top = "17vh";
+        banner.style.height = "83vh";
+        banner.style.width = "100%";
+    }
+    else
+    {
+        profil.style.height= "100vh";
+        profil.style.width= "20vw";
+        profil.style.textAlign = "center";
+        sites.style.maxWidth = "400px";
+        banner.style.top = "0";
+        banner.style.height = "100vh";
+        banner.style.width = "80%";
+    }
+    if (x >= videofond.clientWidth)
+    {
+        videofond.style.width = x + "px";
+    }
+    else if (y > videofond.clientHeight)
+    {
+        videofond.style.height = y + "px";
+    }
+    if (x < videofond.clientWidth)
+        videofond.style.left = (x - videofond.clientWidth) / 2 + "px";
+    refreshnav();
+}
+function refreshnav()
+{
+    var dim = navbardiv.getBoundingClientRect();
+    var dimTop = 0;
+    if (profil.style.textAlign === "left")
+        dimTop = profil.clientHeight;
+    if (dim.top <= dimTop)
+    {
+        if (navbardiv.hasChildNodes() == true)
+        {
+            navbardiv.removeChild(navbar);
+            document.body.insertBefore(navbar, profil);
+        }
+        navbar.style.position = "fixed";
+        navbar.style.top = dimTop + "px";
+        navbar.style.right = "0px";
+        navbar.style.width = content.clientWidth - 6 + "px";
+    }
+    else
+    {
+        if (navbardiv.hasChildNodes() == false)
+        {
+            document.body.removeChild(navbar);
+            navbardiv.appendChild(navbar);
+        }
+        navbar.style.position = "relative";
+        navbar.style.top = "auto";
+        navbar.style.right = "auto";
+        navbar.style.width = "auto";
+    }
+}
+function paddit(elem, is)
+{
+    if (is == 1)
+        elem.src = "img/avatar.jpg";
+    else
+        elem.src = "img/self.jpg";
+}

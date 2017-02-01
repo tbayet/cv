@@ -97,12 +97,12 @@
 						</div>
 						<div id="div04" class="timediv">
 							<div style="height:calc(100% - 330px);"><h4>2012-2013</h4>
-                                <p><i>La personne avec qui j'ai travaillé sur le projet du moteur de jeux 2D m'a proposé de l'utiliser pour <b>développer un jeu de rythme</b>.</i><br />
+                                <p><i>La personne avec qui j'ai travaillé sur le projet du moteur de jeux 2D (section IUT) m'a proposé de l'utiliser pour <b>développer un jeu de rythme</b>.</i><br />
                                     Lancement d'une campagne de financement participatif sur <a href="https://fr.ulule.com/8btm/" target="_blank">Ulule.fr</a> afin de nous aider à <b>monter une entreprise</b> sur Dijon. La société Webcitrus
 							démarre ainsi son activité en février 2013:
 							<ul>
 								<li>Dépannage et cours d'informatique à domicile (déplacements en vélo).</li>
-								<li>Création du jeu vidéo 8bit the musical (renommé ensuite <a href="http://www.osmgame.com/fr/" target="_blank">Old School Musical</a> ).</li>
+								<li>Création du jeu vidéo 8bit the musical (renommé ensuite <a href="https://www.facebook.com/oldschoolmusical" target="_blank">Old School Musical</a> ).</li>
                                 <li>Vente/conseils de matériel et montage d'ordinateurs.</li>
                                 <li>Développement web et logiciel.</li>
 							</ul>
@@ -118,7 +118,7 @@
 							<div style="height:calc(100% - 330px);">
 							<h4>2014-2015</h4>
                                 <p><b>Graphisme de jeux-vidéos 2D</b> (pixel-art), confection de mock'up pour des projets personnels et realisation de commandes.<br />
-                                Quitte l'équipe du projet <a href="http://www.osmgame.com/fr/" target="_blank">Old School Musical</a> (perte de motivation).<br />
+                                Quitte l'équipe du projet <a href="https://www.facebook.com/oldschoolmusical" target="_blank">Old School Musical</a> (perte de motivation).<br />
                                     Travail régulier de la musique, <b>pratique de la percussion, de la guitare, et autres</b>.
                                     Découverte de la <b>MAO (Musique Assistée par Ordinateur)</b>, des instruments virtuels (via MIDI) et composition.
 							<ul>
@@ -168,21 +168,21 @@
 							<div style="height:calc(100% - 330px);">
 							<h4>2015-Aujourd'hui</h4>
                                 <p>Piscine C en juillet (épreuves sur 4 semaines d'apprentissage) puis entrée à l'<b>Ecole 42</b> en novembre. <br />
-                                <i>Je ne saurais vanter ce cursus en étant synthétique, mais c'est de loin le meilleur système éducatif
-							que je connaisse. Il nous apprend à être pédagogue, à bien comprendre tout ce qu'on fait, à travailler en groupe, à être autonome, à persévérer...
+                                    <i>Je ne saurais vanter ce <a href="http://www.42.fr/le-programme/" target="_blank">cursus</a> en étant synthétique, mais c'est de loin le système éducatif le
+							plus adapté que je connaisse. Il nous apprend à être pédagogue, et surtout à bien comprendre tout ce qu'on fait, à travailler en groupe, à être autonome, à persévérer...
                                     On se doit de développer avec une norme, en sécurisant nos programmes et en maîtrisant la mémoire solicitée.</i><br />
                                     Ce <b>CV en ligne</b>, que j'ai entièrement réalisé de zéro, est aussi une façon de montrer mes capacités.
 							Sélection de projets terminés ou entammés depuis mon entrée à l'école :
 							<ul>
-                                    <li><b>Piscine (C - PHP)</b> : apprentissage intensif d'une nouvelle technologie.</li>
+								<li>(en cours)npuzzle : afficher et résoudre en multithreads par 3 algorithmes de chemin différents un jeu de taquin de quelque taille.</li>
+								<li>(en cours)untitled: site web dynamique facilitant la traduction et la modification en équipe de fichiers SRT.</li>
+                                    <li><b>42sh</b> (groupe) : recoder un shell (interpréteur de commandes)</li>
+								<li>Ft_select : afficher avec la librairie termcaps une liste d'élements à sélectionner dynamiquement.</li>
+								<li>Ft_ls : recoder le programme "ls"</li>
+                                    <li><b>Piscine (C - PHP)</b> : apprentissage intensif sur plusieurs semaines d'une nouvelle technologie.</li>
 								<li>Sudoku : algorithme de backtracking pour afficher et résoudre une grille de sudoku.</li>
                                     <li><b>Libft</b> : recoder les fonctions de la librairie standard puis y ajouter les miennes afin de l'utiliser dans les autres projets.</li>
 								<li>Fillit : algorithme de placement pour emboiter au mieux des pièces de tétris.</li>
-								<li>Ft_ls : recoder le programme "ls"</li>
-								<li>Ft_select : afficher avec la librairie termcaps une liste d'élements à sélectionner dynamiquement.</li>
-                                    <li><b>42sh</b> (groupe) : recoder un shell (interpréteur de commandes)</li>
-								<li>(en cours)npuzzle : afficher et résoudre par 3 algorithmes de chemin différents un jeu de taquin de quelque taille.</li>
-								<li>(en cours)untitled: site web dynamique facilitant la traduction et la modification en équipe de fichiers SRT.</li>
 							</ul>
 							Participation au Club Music42 de l'école afin de jouer ensembles et proposer des concerts lors de nos évènements.
 							</p></div>
@@ -239,7 +239,7 @@
 			<div id="knowledge" class="box">
 				<h5>Connaissances</h5>
 				<canvas title="C 95/100" id="ring" width="100" height="100" onclick='drawcircle("ring", 95, "C");'></canvas>
-				<canvas title="Shell script 60/100" id="ring2" width="100" height="100" onclick='drawcircle("ring2", 60, "shell");'></canvas>
+				<canvas title="Shell script 40/100" id="ring2" width="100" height="100" onclick='drawcircle("ring2", 40, "shell");'></canvas>
 				<canvas title="Java 15/100" id="ring3" width="100" height="100" onclick='drawcircle("ring3", 15, "java");'></canvas>
 				<canvas title="C++ 20/100" id="ring4" width="100" height="100" onclick='drawcircle("ring4", 20, "c++");'></canvas>
 				<canvas title="C# 15/100" id="ring5" width="100" height="100" onclick='drawcircle("ring5", 15, "c#");'></canvas>
@@ -271,152 +271,6 @@
 		</div>
 	</div>
 	<script src="tools.js"></script>
-	<script>
-	"use strict";
-		var useMe = new Object();
-		var content = document.getElementById("content");
-		var navbar = document.getElementById("navbar");
-		var navbardiv = document.getElementById("navbardiv");
-		var banner = document.getElementById("banner");
-		var profil = document.getElementById("profil");
-		var videofond = document.getElementById("videofond");
-		var sites = document.getElementById("sites");
-
-		refreshnav();
-		simplebar("bar", 25);
-		simplebar("bar2", 70);
-		simplebar("bar3", 60);
-		simplebar("bar4", 90);
-		simplebar("bar5", 99);
-
-		comp("comp1", 1, "Rigoureux,Méthodique,Polyvalent,Structuré,Cohérent,Astucieux,Coopératif,Autodidacte,Observateur,Médiateur");
-		comp("comp2", 2, "Entousiaste,Consciliant,Raisonné,Progressiste,Positif,Intègre,Créatif,Respectueux,Solidaire,Idéaliste");
-
-		drawcircle("ring", 95, "C");
-		drawcircle("ring2", 60, "shell");
-		drawcircle("ring3", 15, "java");
-		drawcircle("ring4", 20, "c++");
-		drawcircle("ring5", 15, "c#");
-		drawcircle("ring6", 90, "html");
-		drawcircle("ring7", 70, "css");
-        drawcircle("ring8", 65, "js")
-		drawcircle("ring9", 50, "php");
-        drawcircle("ring10", 30, "sql");
-		
-		function slide(parent, sens)
-		{
-			var elem = document.getElementById(parent).lastElementChild;
-            function scrollit()
-            {
-                elem.scrollLeft += (sens * 2);
-            }
-			if (sens == 0)
-				clearInterval(useMe[elem]);
-			else
-			{
-				useMe[elem] = setInterval(scrollit, 1);
-			}
-		}
-		function deploy(div, divchild, imag, tdimg)
-		{
-			var child = document.getElementById(divchild);
-			var parent = document.getElementById(div);
-            var parentimg = document.getElementById(tdimg);
-            var img = document.getElementById(imag);
-			var children = parent.children;
-            var childrenimg = parentimg.children;
-			var i = 0;
-			while (i < children.length)
-			{
-
-                childrenimg[i].className = "imgtime";
-                children[i].className = "timediv";
-				i++;
-			}
-			img.className += " selected";
-            child.className += " opaque";
-		}
-		
-		function openNav() {
-			if (navbar.className === "navbar")
-				navbar.className += " responsive";
-			else
-				navbar.className = "navbar";
-		}
-		function resizeVideo()
-		{
-			var x = document.body.clientWidth;
-			var y = document.documentElement.clientHeight;
-			if (x < y)
-			{
-				profil.style.height= "17vh";
-				profil.style.width= "100vw";
-				profil.style.textAlign = "left";
-				sites.style.maxWidth = "160px";
-				banner.style.top = "17vh";
-				banner.style.height = "83vh";
-				banner.style.width = "100%";
-			}
-			else
-			{
-				profil.style.height= "100vh";
-				profil.style.width= "20vw";
-				profil.style.textAlign = "center";
-				sites.style.maxWidth = "400px";
-				banner.style.top = "0";
-				banner.style.height = "100vh";
-				banner.style.width = "80%";
-			}
-			if (x >= videofond.clientWidth)
-			{
-				videofond.style.width = x + "px";
-			}
-			else if (y > videofond.clientHeight)
-			{
-				videofond.style.height = y + "px";
-			}
-			if (x < videofond.clientWidth)
-				videofond.style.left = (x - videofond.clientWidth) / 2 + "px";
-			refreshnav();
-		}
-		function refreshnav()
-		{
-			var dim = navbardiv.getBoundingClientRect();
-			var dimTop = 0;
-			if (profil.style.textAlign === "left")
-				dimTop = profil.clientHeight;
-			if (dim.top <= dimTop)
-			{
-				if (navbardiv.hasChildNodes() == true)
-				{
-					navbardiv.removeChild(navbar);
-					document.body.insertBefore(navbar, profil);
-				}
-				navbar.style.position = "fixed";
-				navbar.style.top = dimTop + "px";
-				navbar.style.right = "0px";
-				navbar.style.width = content.clientWidth - 6 + "px";
-			}
-			else
-			{
-				if (navbardiv.hasChildNodes() == false)
-				{
-					document.body.removeChild(navbar);
-					navbardiv.appendChild(navbar);
-				}
-				navbar.style.position = "relative";
-				navbar.style.top = "auto";
-				navbar.style.right = "auto";
-				navbar.style.width = "auto";
-			}
-		}
-		function paddit(elem, is)
-		{
-			if (is == 1)
-				elem.src = "img/avatar.jpg";
-			else
-				elem.src = "img/self.jpg";
-		}
-	</script>
+    <script src="comp.js"></script>
 </BODY>
 </HTML>
