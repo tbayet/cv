@@ -125,6 +125,7 @@ span
 	padding-bottom: 2%;
 	width: 100%;
 	text-align: center;
+	background-color: #660000;
 	background-image: url("fond.svg");
 	background-repeat: repeat;
 	background-attachment: fixed;
@@ -460,11 +461,20 @@ audio
 
 #pa4
 {
-	background-image: url("img/pizza.jpg");
+	background-image: url("img/food1.jpg");
 }
 #pa4:hover
 {
-	background-image: url("img/veg.jpg");
+	background-image: url("img/food2.jpg");
+}
+
+#pa5
+{
+	background-image: url("img/fire.jpg");
+}
+#pa5:hover
+{
+	background-image: url("img/hyper.png");
 }
 
 #download

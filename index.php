@@ -168,10 +168,10 @@
 							<div style="height:calc(100% - 330px);">
 							<h4>2015-Aujourd'hui</h4>
                                 <p>Piscine C en juillet (épreuves sur 4 semaines d'apprentissage) puis entrée à l'<b>Ecole 42</b> en novembre. <br />
-                                    <i>Je ne saurais vanter ce <a href="http://www.42.fr/le-programme/" target="_blank">cursus</a> en étant synthétique, mais c'est de loin le système éducatif le
+                                    <i>Afin de vanter ce <a href="http://www.42.fr/le-programme/" target="_blank">cursus</a> en étant synthétique, je dirais c'est de loin le système éducatif le
 							plus adapté que je connaisse. Il nous apprend à être pédagogue, et surtout à bien comprendre tout ce qu'on fait, à travailler en groupe, à être autonome, à persévérer...
                                     On se doit de développer avec une norme, en sécurisant nos programmes et en maîtrisant la mémoire solicitée.</i><br />
-                                    Ce <b>CV en ligne</b>, que j'ai entièrement réalisé de zéro, est aussi une façon de montrer mes capacités.
+                                    Ce <b>CV en ligne</b>, que j'ai entièrement réalisé de zéro, est aussi une façon de montrer mes capacités.<br />
 							Sélection de projets terminés ou entammés depuis mon entrée à l'école :
 							<ul>
 								<li>(en cours)npuzzle : afficher et résoudre en multithreads par 3 algorithmes de chemin différents un jeu de taquin de quelque taille.</li>
@@ -189,7 +189,7 @@
 							<div class="diapo">
 								<div class="butleft" onmouseenter='slide("div06", -1);' onmouseleave='slide("div06", 0);'><p><b><</b></p></div>
 								<div class="butright" onmouseenter='slide("div06", 1);' onmouseleave='slide("div06", 0);'><p><b>></b></p></div>
-								<div><img src="img/421.jpg" /><img src="img/422.png" /><img src="img/423.png" /></div>
+								<div><img src="img/421.jpg" /><img src="img/422.png" /><img src="img/423.png" /><img src="img/tree.png" /></div>
 							</div>
 						</div>
 					</td>
@@ -211,6 +211,9 @@
 				</div>
 				<div id="pa4" class="showimg">
 					<p>Cuisiner en improvisant, plutôt salé, et partager un bon repas avec des proches.</p>
+				</div>
+				<div id="pa5" class="showimg">
+					<p>Jouer à des jeux independants et courts, et quelques jeux en ligne. En depassant les prejuges, on se rend compte d'une immense richesse artistique, mais pas seulement.</p>
 				</div>
 			</div>
 			<div id="langs" class="box" style="text-align:center; text-align:center; vertical-align:top;">
@@ -266,7 +269,7 @@
 				width="100%" height="400px" frameborder="0" style="border:0; margin:0; border-radius: 5px;" allowfullscreen></iframe>
 			</div>
 			<footer>
-				site réalisé from scratch | cv-tbayet.fr 2017
+				site réalisé from scratch | tbayet.esy.es 2017
 			</footer>
 		</div>
 	</div>
