@@ -241,14 +241,14 @@
 				<h5>Connaissances</h5>
 				<canvas title="C 95/100" id="ring" width="100" height="100" onclick='drawcircle("ring", 95, "C");'></canvas>
 				<canvas title="Shell script 40/100" id="ring2" width="100" height="100" onclick='drawcircle("ring2", 40, "shell");'></canvas>
-				<canvas title="Java 15/100" id="ring3" width="100" height="100" onclick='drawcircle("ring3", 15, "java");'></canvas>
-				<canvas title="C++ 20/100" id="ring4" width="100" height="100" onclick='drawcircle("ring4", 20, "c++");'></canvas>
-				<canvas title="C# 15/100" id="ring5" width="100" height="100" onclick='drawcircle("ring5", 15, "c#");'></canvas>
 				<canvas title="HTML 90/100" id="ring6" width="100" height="100" onclick='drawcircle("ring6", 90, "html");'></canvas>
 				<canvas title="CSS 70/100" id="ring7" width="100" height="100" onclick='drawcircle("ring7", 70, "css");'></canvas>
 				<canvas title="Javascript 65/100" id="ring8" width="100" height="100" onclick='drawcircle("ring8", 65, "js")'></canvas>
 				<canvas title="PHP 50/100" id="ring9" width="100" height="100" onclick='drawcircle("ring9", 50, "php");'></canvas>
                 <canvas title="MySQL 30/100" id="ring10" width="100" height="100" onclick='drawcircle("ring10", 30, "sql");'></canvas>
+				<canvas title="Java 15/100" id="ring3" width="100" height="100" onclick='drawcircle("ring3", 15, "java");'></canvas>
+				<canvas title="C++ 10/100" id="ring4" width="100" height="100" onclick='drawcircle("ring4", 10, "c++");'></canvas>
+				<canvas title="C# 10/100" id="ring5" width="100" height="100" onclick='drawcircle("ring5", 10, "c#");'></canvas>
 			</div>
 			<div id="skills" class="box">
 				<h5>Compétences</h5>

@@ -256,8 +256,8 @@ comp("comp2", 2, "Entousiaste,Consciliant,Raisonné,Progressiste,Positif,Intègr
 drawcircle("ring", 95, "C");
 drawcircle("ring2", 40, "shell");
 drawcircle("ring3", 15, "java");
-drawcircle("ring4", 20, "c++");
-drawcircle("ring5", 15, "c#");
+drawcircle("ring4", 10, "c++");
+drawcircle("ring5", 10, "c#");
 drawcircle("ring6", 90, "html");
 drawcircle("ring7", 70, "css");
 drawcircle("ring8", 65, "js")
